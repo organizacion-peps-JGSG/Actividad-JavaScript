@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicio 6. Adivina número secreto</title>
+    </head>
+    <body>
+        <h1>Ejercicio 6. Adivina número secreto</h1>
+        <p>Realice una aplicación que permita averiguar un número secreto entre 0 y 10, permitiendo que el usuario pueda escoger el número de intentos.</p>
+        <b>Intentos: </b><p id="intentos"></p>
+        <script src="js/ejercicio6.js">
+            var intentos=window.prompt('Introduce el número de intentos: ');
+            do{
+                intentos--;
+                document.getElementById("intentos").innerHTML=intentos;
+            }while(intentos>0)
+        </script>
+    </body>
+</html>

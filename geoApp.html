@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Aplicación geometría</title>
+        <style type="text/css">
+            *{
+                margin:0px;
+                padding: 0px;
+            }
+            body{
+                background-color: gray;
+            }
+            #canvas{
+                background-color: white;
+                border: solid 1px #000;
+                display: block;
+                margin: 60px auto;
+                width: 600px;
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Aplicación geometría</h1>
+        <canvas id="canvas">
+
+        </canvas>
+        <form id="formulario" name="formulario">
+            <button type="button" id="btnLinea" name="btnLinea">Línea</button>
+            <button type="button" id="btnCuadrado" name="btnCuadrado">Cuadrado</button>
+            <button type="button" id="btnRectangulo" name="btnRectangulo">Rectangulo</button>
+            <button type="button" id="btnCirculo" name="btnCirculo">Círculo</button>
+            <button type="button" id="btnTriangulo" name="btnTriangulo">Triángulo</button>
+            <p>Contador de Figuras:</p><p id="contador"></p>
+        </form>
+        <script src="js/Punto2D.js"></script>
+        <script src="js/Linea.js"></script>
+        <script src="js/Rectangulo.js"></script>
+        <script src="js/Cuadrado.js"></script>
+        <script src="js/Circulo.js"></script>
+        <script src="js/Triangulo.js"></script>
+        <script src="js/geoApp.js"></script>
+       <!-- <script src="js/Figura.js"></script> --> 
+    </body>
+</html>
