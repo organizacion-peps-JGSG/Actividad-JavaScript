@@ -9,7 +9,7 @@ const assert = chai.assert;    // Using Assert style
 const expect = chai.expect;    // Using Expect style
 const should = chai.should();  // Using Should style
 
-const {fibonacci} = require('../ejercicio7'); // Para poder referenciar adecuadamente
+const {fibonacci} = require('../js/ejercicio7'); // Para poder referenciar adecuadamente
 
 describe('Test de prueba Ejercicio 7. Series de Fibonacci;', () => {
     describe('Caso de prueba 1: fibonacci(n)', () => {
