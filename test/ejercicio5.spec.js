@@ -9,7 +9,7 @@ const assert = chai.assert;    // Using Assert style
 const expect = chai.expect;    // Using Expect style
 const should = chai.should();  // Using Should style
 
-const {esMayorEdad, obtenerCalificacion} = require('../ejercicio5'); // Para poder referenciar adecuadamente
+const {esMayorEdad, obtenerCalificacion} = require('../js/ejercicio5'); // Para poder referenciar adecuadamente
 
 
 describe('Test de pruebas Ejercicio 5', () => {
