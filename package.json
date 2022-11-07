@@ -1,0 +1,35 @@
+{
+  "name": "testing-ci",
+  "version": "1.0.0",
+  "description": "Proyecto de prueba integracion continua con CI",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/organizacion-peps-JGSG/Testing-CI.git"
+  },
+  "keywords": [
+    "Integración",
+    "Continua",
+    "CI",
+    "mocha",
+    "chai",
+    "JavaScript",
+    "Node.js"
+  ],
+  "author": "José Gaspar Sánchez García",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/organizacion-peps-JGSG/Testing-CI/issues"
+  },
+  "homepage": "https://github.com/organizacion-peps-JGSG/Testing-CI#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.1.0"
+  }
+}
