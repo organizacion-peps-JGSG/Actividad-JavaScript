@@ -19,7 +19,7 @@
         <script>
             
             // Solicita una nota por teclado
-            var nota=prompt('Introduzca la nota ');
+            ;
             var calificacion="";
             var n=Number.parseInt(nota);
 
@@ -38,6 +38,43 @@
 
             sino calificacion <-- Incorrecta
             */
+            do{
+                var nota=prompt('Introduzca la nota ')
+           }
+            while (isNaN(nota) || nota.trim() =='')
+            var calificacion="";
+            var n=Number.parseInt(nota);
+
+            if(n >= 0 && n < 3){
+                    //window.alert('Muy deficiente')
+                    calificacion="Muy deficiente";
+                }
+                else if(n >=3 && n < 5){
+                    //window.alert('Insuficiente')
+                    calificacion="Insuficiente";
+                }
+                else if(n >=5 && n < 6){
+                    //window.alert('Suficiente')
+                    calificacion="Suficiente";
+                }
+                else if(n >=6 && n <7){
+                   // window.alert('Bien')
+                   calificacion="Bien";
+                }
+                else if (n >=7 && nota <= 9){
+                    //window.alert('Notable')
+                    calificacion="Notable";
+                }
+                else if (n >9 && n <= 10){
+                    //window.alert('Sobresaliente')
+                    calificacion="Sobresaliente";
+                }
+                else{
+                    //window.alert('Sobresaliente')
+                    calificacion="Incorrecta";
+                }
+               
+                
 
             // Mostramos el resultado
             alert('Una nota de '+nota+' es '+calificacion);

@@ -21,14 +21,39 @@
             // Solicita una nota por teclado
             var nota=prompt('Introduzca la nota ');
             var calificacion="";
-
+            var n=Number.parseInt(nota);
             // Estructura de control *** switch(nota) ***
-            
+            switch(n){
+                case 0:
+                case 1:
+                case 2:calificacion="Muy deficiente";
+                break;
+                case 3:
+                case 4:
+                calificacion="Insuficiente";
+                break;
+                case 5:
+                calificacion="Suficiente";
+                break;
+                case 6:
+                calificacion="Bien";
+                break;
+                case 7:
+                case 8:
+                calificacion="Notable";
+                break;
+                case 9:
+                case 10:
+                calificacion="Sobresaliente";
+                break;
+                default:calificacion="Incorrecta";
+            }
             // Repetimos el ejercicio 3 con estructura de control switch - case
-
+            
             alert('Una nota de '+nota+' es '+calificacion);
             console.log('Una nota de '+nota+' es '+calificacion);
-                
+              
+            
         </script>
     </body>
 </html>
