@@ -21,6 +21,24 @@
                 fpara Y            
                 document.writeln("<br/>");
             fpara X*/
+           
+            for (var x in numeros) {
+                document.write("Tabla de multiplicar del "+numeros[x]+"<br/>");
+                console.log("Tabla de multiplicar del "+numeros[x]);
+                document.write("-----------------------------------------<br/>");
+                console.log("---------------------------------------------------");
+                
+                for ( var y in numeros) {
+                document.write(numeros[x]+" x "+numeros[y]+" = "+(numeros[x]*numeros[y])+"<br/>");
+                    console.log(numeros[x]+" x "+numeros[y]+" = "+(numeros[x]*numeros[y]));
+            }
+                                   
+                document.write("<br/>");
+                
+        }
+
+
+
         </script>
     </body>
 </html>
