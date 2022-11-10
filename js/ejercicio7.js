@@ -8,9 +8,15 @@ function fibonacci(n)
 {
     let vector=new Array(); // Creamos un vector para alamcenar el cálculo
     
-    
+   
     // ESCRIBE TU CÓDIGO AQUÍ
+   vector[0]=1;
+   vector[1]=1;
     
+   for(let i=2;i<n;i++){
+    vector[i]=vector[i-1]+vector[i-2];
+   }
+
     
     return vector; // Retorno de la función
 }
@@ -28,6 +34,7 @@ function appMain()
     console.log(`Fibonacci(${x}) = [ ${v} ]`);
     // alert("Fibonacci: "+v);
     salidaHTML.innerHTML="Fibonacci("+x+") = ["+v+"].";
+
 }
 
 // Exportamos la funcion fibonacci para poder realizar el Testing
