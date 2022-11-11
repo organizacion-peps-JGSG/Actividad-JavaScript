@@ -16,25 +16,30 @@
         <p id="demo">Escribiremos en este elemento HTML</p>
         <script>
             // Alerta
-            
+            window.alert("Hola Mundo desde la ventana de alerta");
             /* 
                 Escribir en un elemento HTML, usando innerHTML.
                 Escribimos en este elemento HTML: ¡Hola mundo!
             */
+            document.getElementById("demo").innerHTML="Hola Mundo!";
            
            
             // Consolas log
+            console.log("Hola Mundo, desde la consola");
            
             // Mensaje de información
+            console.info("Información del tiempo en tu ciudad");
             
             // Mensaje de error
+            console.error("Error Fatal");
             
             // Mensaje de advertencia
+            console.warn("Cuidado!")
             
             // Debugger
             // Descomenta --> 
-            /* Descomenta --> /* debugger
-            console.log('Despues de la depuración'); */ // <--- Descomenta para comprobar el efecto.
+            debugger;            
+            console.log('Despues de la depuración'); // <--- Descomenta para comprobar el efecto.
         </script>
     </body>
 </html>
