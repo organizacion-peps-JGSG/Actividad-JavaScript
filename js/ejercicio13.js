@@ -36,22 +36,22 @@ function procesarCadenas()
     console.log("La longitud de "+nombre+" es "+longitud.length);
 
     // Concatena el Nombre y los Apellidos con concat(). 
-    var fullName= document.getElementById("nombre").value+" "+document.getElementById("apellidos").value;// <-- NO SUMES ¡¡¡ CONCATENA CON UNA FUNCIÓN !!!
+    var fullName= NOMBRE.concat(" "+apellidos)//document.getElementById("nombre").value+" "+document.getElementById("apellidos").value;// <-- NO SUMES ¡¡¡ CONCATENA CON UNA FUNCIÓN !!!
     // Obtén la longitud de la nueva cadena.
     var longitudFull=fullName.length; // <-- COMPLETA EL CÓDIGO CORRECTO
     console.log(`Nombre completo: ${fullName} (${longitudFull})`);
     fullNameHTML.innerHTML=fullName+" ("+longitudFull+")";
     
     // Del Nombre completo extrae la subcadena comprendida entre las posiciones 5 y 10.
-    var extracto="cOMPleTA el CoDiGo"; // <-- CORRIGE Y COMPLETA EL CODIGO
+    var extracto=fullName.substring(5,10); // <-- CORRIGE Y COMPLETA EL CODIGO
     console.log("Extracto [5 a 10]: "+extracto);
 
     // Del Nombre completo extrae los 3 primeros carácteres.
-    extracto="XxXWyudrh"; // <-- CORRIGE Y COMPLETA EL CÓDIGO
+    extracto=fullName.substring(0,3); // <-- CORRIGE Y COMPLETA EL CÓDIGO
     console.log("Tres primeros carácteres: "+extracto);
 
     // En el Nombre completo remplaza Pedro por Antonio
-    var nuevoNombre="EsTo eS kAKa ;)-"; // <-- CORRIGE Y COMPLETA EL CÓDIGO
+    var nuevoNombre=fullName.replace("Diego","Antonio"); // <-- CORRIGE Y COMPLETA EL CÓDIGO
     console.log("Nuevo nombre: "+nuevoNombre);
 
 
