@@ -4,33 +4,55 @@
  * @returns media
  * @author: Autor/a
  */
-function calcularMedia(v)
+function calcularMedia(notas)
 {
     // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    var media=0, i=0, arraylen=notas.length;
+
+    //const initialValue = 0;
+    var suma = notas.reduce(
+    (previousValue, currentValue) => previousValue + currentValue);
+     media = suma/arraylen;
+    return media;
 }
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
  * @returns minima
  */
-function calcularMinimo(v)
+function calcularMinimo(notas)
 {
     let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
-    return minima;
-}
+    
+        return notas.reduce(
+            (accumulator, currentValue) => {
+                return [
+                    Math.min(currentValue, accumulator[0])
+                ];
+            }, [Number.MAX_VALUE]
+        );
+    }
+
+  
 /**
  * Obtiene la nota Máxima
  * @param {Array} v 
  * @returns maxima
  */
-function calcularMaximo(v)
+function calcularMaximo(notas)
 {
     let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
-    return maxima;
+    return notas.reduce(
+        (accumulator, currentValue) => {
+            return [
+                 
+                Math.max(currentValue, accumulator[1])
+            ];
+        }, [Number.MIN_VALUE]
+    );
 }
+
 /**
  * Cuenta el número de aprobados
  * @param {Array} v 
