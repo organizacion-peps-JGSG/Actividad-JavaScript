@@ -43,14 +43,9 @@ function calcularMinimo(notas)
 function calcularMaximo(notas)
 {
     let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    return notas.reduce(
-        (accumulator, currentValue) => {
-            return [
-                 
-                Math.max(currentValue, accumulator[1])
-            ];
-        }, [Number.MIN_VALUE]
-    );
+    const maxima2 = notas.reduce((a, b) => Math.max(a, b));
+
+    return maxima2;
 }
 
 /**
@@ -60,11 +55,16 @@ function calcularMaximo(notas)
  */
 function contarAprobados(v)
 {
-    let aprobados=0;
+    let aprobados=v.filter(apr);
+    ;
+
+    function apr(nota) {
+      return nota >= 5;
+    }
 
     // COMPLETA TU CODIGO
 
-    return aprobados;
+    return aprobados.length;
 }
 /**
  * Cuenta el número de suspensos
@@ -73,11 +73,16 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=0;
-    
+    let suspensos=v.filter(apr);
+    ;
+
+    function apr(nota) {
+      return nota < 5;
+    }
+
     // COMPLETA TU CODIGO
 
-    return suspensos;
+    return suspensos.length;
 }
 
 

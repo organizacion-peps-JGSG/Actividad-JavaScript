@@ -4,16 +4,16 @@
  * @returns media
  * @author: Autor/a
  */
-function calcularMedia(notas)
+function calcularMedia(v)
 {
     // IMPLEMENTA TU CODIGO AQUÍ
-    var media=0, i=0, arraylen=notas.length, suma=0;
+    var media=0, i,  suma=0;
 
-    while(i< arraylen){
-        suma=suma + notas[i];
-        i++;
+    for (i=0; i< v.length;i++){
+        suma=suma + v[i];
+        
     }
-    media=suma/arraylen;
+    media=suma/v.length;
     
     return media;
 }
