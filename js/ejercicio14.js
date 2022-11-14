@@ -54,9 +54,15 @@ function calcularMaximo(notas)
  * @param {Array} v 
  * @returns aprobados: número de aprobados.
  */
-function contarAprobados(v)
+function contarAprobados(notas)
 {
-    let aprobados=0;
+    let aprobados=0,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    while(i< arraylen){
+        if  (notas[i]>=5){
+            aprobados++;
+        }
+         i++;
+     }
 
     // COMPLETA TU CODIGO
 
@@ -67,9 +73,15 @@ function contarAprobados(v)
  * @param {Array} v 
  * @returns suspensos: número de suspensos.
  */
-function contarSuspensos(v)
+function contarSuspensos(notas)
 {
-    let suspensos=0;
+    let suspensos=0,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    while(i< arraylen){
+        if  (notas[i]<5){
+            suspensos++;
+        }
+         i++;
+     }
     
     // COMPLETA TU CODIGO
 
@@ -80,7 +92,7 @@ function contarSuspensos(v)
 
 /**
  * Aplicacion principal Ejercicio14
- * @author: José Gaspar Sánchez García
+ * @author: Diego Gonzalo De Maio
  */
 
 function appMain(){
@@ -110,6 +122,7 @@ function appMain(){
 }
 
 // Exportamos las funciones para poder realizar el Testing
+
 module.exports={
     calcularMedia,
     calcularMaximo,
