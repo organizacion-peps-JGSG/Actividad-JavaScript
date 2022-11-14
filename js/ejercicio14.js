@@ -4,22 +4,33 @@
  * @returns media
  * @author: Autor/a
  */
-function calcularMedia(v)
+function calcularMedia(notas)
 {
     // IMPLEMENTA TU CODIGO AQUÍ
+    var media=0, i=0, arraylen=notas.length, suma=0;
 
+    while(i< arraylen){
+        suma=suma + notas[i];
+        i++;
+    }
+    media=suma/arraylen;
     
-    return -1;
+    return media;
 }
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
  * @returns minima
  */
-function calcularMinimo(v)
+function calcularMinimo(notas)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
+    let minima=Number.MAX_VALUE,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    while(i< arraylen){
+       if  (minima > notas[i]){
+        minima=notas[i];
+       }
+        i++;
+    }
     return minima;
 }
 /**
@@ -27,10 +38,15 @@ function calcularMinimo(v)
  * @param {Array} v 
  * @returns maxima
  */
-function calcularMaximo(v)
+function calcularMaximo(notas)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
+    let maxima=Number.MIN_VALUE,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    while(i< arraylen){
+        if  (maxima < notas[i]){
+            maxima=notas[i];
+        }
+         i++;
+     }
     return maxima;
 }
 /**

@@ -51,7 +51,7 @@ function procesarCadenas()
     console.log("Tres primeros carácteres: "+extracto);
 
     // En el Nombre completo remplaza Pedro por Antonio
-    var nuevoNombre=fullName.replace("Diego","Antonio"); // <-- CORRIGE Y COMPLETA EL CÓDIGO
+    var nuevoNombre=fullName.replace(NOMBRE,"Antonio"); // <-- CORRIGE Y COMPLETA EL CÓDIGO
     console.log("Nuevo nombre: "+nuevoNombre);
 
 
