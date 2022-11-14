@@ -23,15 +23,9 @@ function calcularMedia(notas)
 function calcularMinimo(notas)
 {
     let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
-    
-        return notas.reduce(
-            (accumulator, currentValue) => {
-                return [
-                    Math.min(currentValue, accumulator[0])
-                ];
-            }, [Number.MAX_VALUE]
-        );
+  const minima2 = notas.reduce((a, b) => Math.min(a, b));
+
+    return minima2;
     }
 
   
