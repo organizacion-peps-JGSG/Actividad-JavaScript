@@ -8,13 +8,16 @@ function calcularMedia(v)
 {
     // IMPLEMENTA TU CODIGO AQUÍ
     var media=0, i,  suma=0;
-
+    if (v.length>0){
     for (i=0; i< v.length;i++){
         suma=suma + v[i];
         
     }
     media=suma/v.length;
-    
+    }
+    else {
+        media=0;
+    }
     return media;
 }
 /**
@@ -25,11 +28,18 @@ function calcularMedia(v)
 function calcularMinimo(notas)
 {
     let minima=Number.MAX_VALUE,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    
+    if (notas.length>0){
+
     while(i< arraylen){
        if  (minima > notas[i]){
         minima=notas[i];
        }
         i++;
+        }
+    }
+    else {
+        minima=0;
     }
     return minima;
 }
@@ -41,12 +51,17 @@ function calcularMinimo(notas)
 function calcularMaximo(notas)
 {
     let maxima=Number.MIN_VALUE,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (notas.length>0){
     while(i< arraylen){
         if  (maxima < notas[i]){
             maxima=notas[i];
         }
          i++;
      }
+    }
+    else {
+        maxima =0;
+    }
     return maxima;
 }
 /**

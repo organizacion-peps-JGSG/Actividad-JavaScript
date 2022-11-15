@@ -9,10 +9,14 @@ function calcularMedia(notas)
     // IMPLEMENTA TU CODIGO AQUÍ
     var media=0, i=0, arraylen=notas.length;
 
-    //const initialValue = 0;
-    var suma = notas.reduce(
-    (previousValue, currentValue) => previousValue + currentValue);
-     media = suma/arraylen;
+  
+    if (notas.length>0){
+        var suma = notas.reduce(
+        (previousValue, currentValue) => previousValue + currentValue);
+        media = suma/arraylen;
+    }
+    else {media=0;
+    }
     return media;
 }
 /**
@@ -22,10 +26,15 @@ function calcularMedia(notas)
  */
 function calcularMinimo(notas)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-  const minima2 = notas.reduce((a, b) => Math.min(a, b));
-
-    return minima2;
+   // let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+  let minima;
+    if (notas.length>0){
+        minima = notas.reduce((a, b) => Math.min(a, b));
+        }
+    else{
+        minima=0;
+    }
+    return minima;
     }
 
   
@@ -36,10 +45,15 @@ function calcularMinimo(notas)
  */
 function calcularMaximo(notas)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    const maxima2 = notas.reduce((a, b) => Math.max(a, b));
-
-    return maxima2;
+    let maxima;
+    //let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (notas.length>0){
+         maxima = notas.reduce((a, b) => Math.max(a, b));
+    }
+    else{
+        maxima=0;
+    }
+    return maxima;
 }
 
 /**
@@ -67,10 +81,10 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=v.filter(apr);
+    let suspensos=v.filter(susp);
     ;
 
-    function apr(nota) {
+    function susp(nota) {
       return nota < 5;
     }
 
@@ -89,7 +103,10 @@ function contarSuspensos(v)
 function appMain(){
 
     // Indique cuantas notas desea introducir
-    let numeroNotas=parseInt(prompt("¿Cuantas notas desea introdurcir?"));
+    //do{
+    var numeroNotas=prompt("¿Cuantas notas desea introdurcir?");
+   // }while (isNaN(numeroNotas) || numeroNotas.trim() =='' || numeroNotas<=0);
+
     let notas=new Array();
     var n=-1;
     // Leemos notas desde teclado

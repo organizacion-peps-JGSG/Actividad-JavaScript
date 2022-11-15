@@ -10,14 +10,19 @@ function fibonacci(n)
     
    
     // ESCRIBE TU CÓDIGO AQUÍ
-   vector[0]=1;
-   vector[1]=1;
-    
-   for(let i=2;i<n;i++){
-    vector[i]=vector[i-1]+vector[i-2];
-   }
+    if (n>0){
 
+        vector[0]=1;
+        if (n>1){
+
+            vector[1]=1;
     
+            for(let i=2;i<n;i++){
+                vector[i]=vector[i-1]+vector[i-2];
+            }
+
+        }
+    }
     return vector; // Retorno de la función
 }
 

@@ -50,7 +50,7 @@ function obtenerCalificacion(nota)
                 case 10:
                 calificacion="Sobresaliente";
                 break;
-               
+               default: calificacion= "Incorrecta";
             }
 
             return calificacion;
