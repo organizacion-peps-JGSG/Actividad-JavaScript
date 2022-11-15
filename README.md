@@ -63,3 +63,8 @@ Alumno: FranTorSan
 - [Node JS Test](https://github.com/l3lackcurtains/nodejs-mocha-chai-test-tdd).
 - [Mocha Chai Unit Testing](https://github.com/KovDimaY/Mocha-Chai-Unit-Testing).
 - [Unit Test Your Javascript using Mocha-Chai](https://www.sitepoint.com/unit-test-javascript-mocha-chai/).
+
+
+## Testing en local
+### npm install (para que se descarguen las librerías necesarias para probar)
+### npm test (para ejecutar las pruebas)
