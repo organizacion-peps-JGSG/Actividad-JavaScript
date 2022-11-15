@@ -15,7 +15,8 @@ function calcularMedia(notas)
         (previousValue, currentValue) => previousValue + currentValue);
         media = suma/arraylen;
     }
-    else {media=0;
+    else {
+        media=0;
     }
     return media;
 }
@@ -103,10 +104,11 @@ function contarSuspensos(v)
 function appMain(){
 
     // Indique cuantas notas desea introducir
-    //do{
-    var numeroNotas=prompt("¿Cuantas notas desea introdurcir?");
-   // }while (isNaN(numeroNotas) || numeroNotas.trim() =='' || numeroNotas<=0);
+    do{
+        var numeroNotas=prompt("¿Cuantas notas desea introdurcir?");
+    }while (isNaN(numeroNotas) || numeroNotas.trim() =='' || numeroNotas<=0);
 
+   
     let notas=new Array();
     var n=-1;
     // Leemos notas desde teclado
@@ -136,4 +138,5 @@ module.exports={
     calcularMinimo,
     contarAprobados,
     contarSuspensos,
-};
+}
+

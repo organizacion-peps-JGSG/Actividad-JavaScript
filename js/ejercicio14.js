@@ -50,18 +50,21 @@ function calcularMinimo(notas)
  */
 function calcularMaximo(notas)
 {
-    let maxima=Number.MIN_VALUE,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    let maxima=Number.MIN_VALUE
+    ,i=0
+    ,arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    
     if (notas.length>0){
-    while(i< arraylen){
-        if  (maxima < notas[i]){
+        while(i< arraylen){
+            if  (maxima < notas[i]){
             maxima=notas[i];
+                }
+            i++;
         }
-         i++;
-     }
     }
     else {
         maxima =0;
-    }
+        }
     return maxima;
 }
 /**
@@ -71,16 +74,17 @@ function calcularMaximo(notas)
  */
 function contarAprobados(notas)
 {
-    let aprobados=0,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    while(i< arraylen){
-        if  (notas[i]>=5){
-            aprobados++;
+    let aprobados=0
+    ,i=0
+    ,arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    
+        while(i< arraylen){
+            if  (notas[i]>=5){
+                aprobados++;
+                }
+            i++;
         }
-         i++;
-     }
-
-    // COMPLETA TU CODIGO
-
+   // COMPLETA TU CODIGO
     return aprobados;
 }
 /**
@@ -90,16 +94,17 @@ function contarAprobados(notas)
  */
 function contarSuspensos(notas)
 {
-    let suspensos=0,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    while(i< arraylen){
-        if  (notas[i]<5){
-            suspensos++;
-        }
-         i++;
-     }
+    let suspensos=0
+    ,i=0
+    ,arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
+        while(i< arraylen){
+            if  (notas[i]<5){
+                suspensos++;
+                }
+            i++;
+        }
     // COMPLETA TU CODIGO
-
     return suspensos;
 }
 
@@ -113,7 +118,9 @@ function contarSuspensos(notas)
 function appMain(){
 
     // Indique cuantas notas desea introducir
-    let numeroNotas=parseInt(prompt("¿Cuantas notas desea introdurcir?"));
+    do{
+        var numeroNotas=prompt("¿Cuantas notas desea introdurcir?");
+    }while (isNaN(numeroNotas) || numeroNotas.trim() =='' || numeroNotas<=0);
     let notas=new Array();
     var n=-1;
     // Leemos notas desde teclado
