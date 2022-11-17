@@ -42,7 +42,7 @@ function procesarCadenas()
     fullNameHTML.innerHTML=fullName+" ("+longitudFull+")";
     
     // Del Nombre completo extrae la subcadena comprendida entre las posiciones 5 y 10.
-    var extracto=fullName.substring(5,10); // <-- CORRIGE Y COMPLETA EL CODIGO
+    var extracto=fullName.substring(5,10);
     console.log("Extracto [5 a 10]: "+extracto);
 
     // Del Nombre completo extrae los 3 primeros carácteres.
