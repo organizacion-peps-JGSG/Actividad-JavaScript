@@ -2,7 +2,7 @@
 # Puesta en Producción Segura: Lenguajes de programación.
 ## Ejercicios de Programación con JavaScript
 ### Profesor José Gaspar Sánchez García.
-Alumno:
+Alumno: FranTorSan
 
 * [Ejercicio 0](ejercicio0.html). Prueba los distintos mensajes que puede emitir JavaScript.
 * [Ejercicio 1](ejercicio1.html). Números y Consolas en Java Script. En una cena de amigos os llega la cuenta y queréis dividir entre todos.   
@@ -63,3 +63,8 @@ Alumno:
 - [Node JS Test](https://github.com/l3lackcurtains/nodejs-mocha-chai-test-tdd).
 - [Mocha Chai Unit Testing](https://github.com/KovDimaY/Mocha-Chai-Unit-Testing).
 - [Unit Test Your Javascript using Mocha-Chai](https://www.sitepoint.com/unit-test-javascript-mocha-chai/).
+
+
+## Testing en local
+### npm install (para que se descarguen las librerías necesarias para probar)
+### npm test (para ejecutar las pruebas)

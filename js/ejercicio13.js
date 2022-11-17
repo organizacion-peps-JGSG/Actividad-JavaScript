@@ -1,7 +1,6 @@
 /**
  * Ejercicio 13. Cadenas en Javascript
- * @author: Sustituye tu nombre y apellidos
- */
+ * @author: Fran Torregrosa
 
 /**
  * Completa la función Procesar Cadedenas
@@ -23,35 +22,35 @@ function procesarCadenas()
     console.log("Apellidos: "+apellidos);
 
     // Convertimos el NOMBRE a MAYÚSCULAS
-    var NOMBRE="" // <-- SUSTITUYE AQUÍ TU CÓDIGO
+    var NOMBRE=document.getElementById("nombre").value.toUpperCase();
     console.log('NOMBRE: '+NOMBRE);
     mayusculasHTML.innerHTML=NOMBRE;
 
     // Convertimos el NOMBRE a minusculas
-    console.log('nombre: '+NOMBRE); // <-- CORRIGE ESTE CÓDIGO
+    console.log('nombre: '+NOMBRE.toLowerCase());
 
     
     // Obtenemos la longitud del NOMBRE
-    var longitud=0; // <-- CORRIGE ESTE CÓDIGO
+    var longitud=nombre.length;
     console.log("La longitud de "+nombre+" es "+longitud);
 
     // Concatena el Nombre y los Apellidos con concat(). 
-    var fullName=""; // <-- NO SUMES ¡¡¡ CONCATENA CON UNA FUNCIÓN !!!
+    var fullName=nombre.concat(" ".concat(apellidos));
     // Obtén la longitud de la nueva cadena.
-    var longitudFull=-1; // <-- COMPLETA EL CÓDIGO CORRECTO
+    var longitudFull=fullName.length;
     console.log(`Nombre completo: ${fullName} (${longitudFull})`);
     fullNameHTML.innerHTML=fullName+" ("+longitudFull+")";
     
     // Del Nombre completo extrae la subcadena comprendida entre las posiciones 5 y 10.
-    var extracto="cOMPleTA el CoDiGo"; // <-- CORRIGE Y COMPLETA EL CODIGO
+    var extracto=fullName.substring(5,10);
     console.log("Extracto [5 a 10]: "+extracto);
 
     // Del Nombre completo extrae los 3 primeros carácteres.
-    extracto="XxXWyudrh"; // <-- CORRIGE Y COMPLETA EL CÓDIGO
+    extracto=fullName.substring(0,3);
     console.log("Tres primeros carácteres: "+extracto);
 
     // En el Nombre completo remplaza Pedro por Antonio
-    var nuevoNombre="EsTo eS kAKa ;)-"; // <-- CORRIGE Y COMPLETA EL CÓDIGO
+    var nuevoNombre=nombre.replace("Pedro","Antonio");
     console.log("Nuevo nombre: "+nuevoNombre);
 
 

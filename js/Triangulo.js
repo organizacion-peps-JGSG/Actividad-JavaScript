@@ -14,7 +14,8 @@ class Triangulo extends Figura{
     constructor(o,b,h)
     {
         super(o);
-        // COMPLETA EL CÓDIGO
+        this.base=b;
+        this.altura=h;
     }
     /**
      * Calcula el área del Triángulo.
@@ -22,8 +23,7 @@ class Triangulo extends Figura{
      */
     calcularArea()
     {
-        // COMPLETA Y CORRIGE EL CÓDIGO
-        return (-2);
+        return this.base*this.altura/2;
     }
     /**
      * Obtiene base del Triángulo.

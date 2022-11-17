@@ -2,12 +2,15 @@
  * Calcula la media de los valores
  * @param {Array} v 
  * @returns media
- * @author: Autor/a
+ * @author: Fran Torregrosa
  */
 function calcularMedia(v)
 {
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    let sumatorio=0;
+    for (i=0;i<v.length;i++){
+        sumatorio=sumatorio+v[i];
+    }
+    return sumatorio==0?sumatorio:sumatorio/v.length;
 }
 /**
  * Obtiene la nota mínima
@@ -16,8 +19,15 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
+    let minima=0;
+    if (v.length>0){
+        minima=v[0];
+    }
+    for (i=1;i<v.length;i++){
+        if (v[i]<minima){
+            minima=v[i];
+        }
+    }
     return minima;
 }
 /**
@@ -27,8 +37,15 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
+    let maxima=0; 
+    if (v.length>0){
+        maxima=v[0];
+    }
+    for (i=1;i<v.length;i++){
+        if (v[i]>maxima){
+            maxima=v[i];
+        }
+    }
     return maxima;
 }
 /**
@@ -39,9 +56,13 @@ function calcularMaximo(v)
 function contarAprobados(v)
 {
     let aprobados=0;
+    let notaCorte=5;
 
-    // COMPLETA TU CODIGO
-
+    for (i=0;i<=v.length;i++){
+        if (v[i]>=notaCorte){
+            aprobados++
+        }
+    }
     return aprobados;
 }
 /**
@@ -52,9 +73,13 @@ function contarAprobados(v)
 function contarSuspensos(v)
 {
     let suspensos=0;
+    let notaCorte=5;
     
-    // COMPLETA TU CODIGO
-
+    for (i=0;i<v.length;i++){
+        if (v[i]<notaCorte){
+            suspensos++
+        }
+    }
     return suspensos;
 }
 

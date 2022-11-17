@@ -6,8 +6,9 @@
  */
 function calcularMedia(v)
 {
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    return v.length==0?0:v.reduce(function(a, b) {
+        return a+b;
+    })/v.length;
 }
 /**
  * Obtiene la nota mínima
@@ -16,7 +17,9 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    return v.length==0?0:v.reduce(function(a, b) {
+        return a<b?a:b;
+    });
     
     return minima;
 }
@@ -27,9 +30,9 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
-    return maxima;
+    return v.length==0?0:v.reduce(function(a, b) {
+        return a>b?a:b;
+    });    
 }
 /**
  * Cuenta el número de aprobados
@@ -38,11 +41,12 @@ function calcularMaximo(v)
  */
 function contarAprobados(v)
 {
-    let aprobados=0;
+    let notaCorte=5;
 
-    // COMPLETA TU CODIGO
-
-    return aprobados;
+    return v.filter(function(n){
+        if (n>=notaCorte)
+        return n;
+    }).length;
 }
 /**
  * Cuenta el número de suspensos
@@ -51,11 +55,12 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=0;
-    
-    // COMPLETA TU CODIGO
+    let notaCorte=5;
 
-    return suspensos;
+    return v.filter(function(n){
+        if (n<notaCorte)
+        return n;
+    }).length;
 }
 
 

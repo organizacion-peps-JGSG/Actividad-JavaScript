@@ -80,7 +80,7 @@ function geoApp()
         console.log("Dibujado cuadrado");
     });
 
-    // Programamos el comportamiento del botón Cuadrado
+    // Programamos el comportamiento del botón Rectángulo
     btnRectangulo.addEventListener("click",function(){
         let x1=parseInt(prompt("Rectangulo.x: "));
         let y1=parseInt(prompt("Rectangulo.y: "));
