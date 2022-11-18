@@ -1,7 +1,6 @@
-<!-- Escribe aquí tu nombre-->
 <html lang="es">
     <head>
-        <title>Ejercicio 4. Calcular nota</title>
+        <title>Ejercicio 3. Calcular nota</title>
     </head>
     <body>
         <h1>Cálculo de notas</h1>
@@ -19,27 +18,18 @@
         <script>
             
             // Solicita una nota por teclado
-            var nota=prompt('Introduzca la nota ');
+            var n=prompt('Introduzca la nota ');
             var calificacion="";
-            var n=Number.parseInt(nota);
+            var nota=Number.parseInt(n);
 
             // Estructura de control *** if - else ***
-
-            /*
-            si n>=0 y n <3 entonces
-                calificacion <-- Muy deficiente
-            sino si n>=3 y n<5 entonces
-                calificacion <-- Insuficiente
-            sino si n>=5 y n<6 entonces
-                calificacion <-- Suficiente
-            sino si n>=6 y n<7 entonces
-                calificación <-- Bien
-            sino si ...
-
-            sino calificacion <-- Incorrecta
-            */
-
-            // Mostramos el resultado
+            if(nota < 3){calificacion="muy deficiente"}
+            else if(nota >= 3 && nota <5){calificacion = "insuficiente"}
+            else if(nota >= 5 && nota <6){calificacion = "suficiente"}
+            else if(nota >= 6 && nota <7){calificacion = "bien"}
+            else if(nota >= 7 && nota <9){calificacion = "notable"}
+            else if(nota >= 9 && nota <=10){calificacion = "sobresaliente"}
+            else{alert("introduce un nota entre 0-10")}
             alert('Una nota de '+nota+' es '+calificacion);
             console.log('Una nota de '+nota+' es '+calificacion);                
         </script>

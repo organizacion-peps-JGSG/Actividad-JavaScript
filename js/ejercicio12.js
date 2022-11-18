@@ -30,9 +30,9 @@ function menu2()
     console.info("Resta:");
     
     // IMPLEMENTA TU CÓDIGO AQUÍ
-    let minuendo=0;
-    let sustraendo=0;
-    let resultado=-1;
+    let minuendo=parseInt(prompt("Introduzca el minuendo: ",0));
+    let sustraendo=parseInt(prompt("Introduzca el sustraendo: ",0));
+    let resultado=minuendo - sustraendo;
 
     console.log("El resultado de la resta "+minuendo+" - "+sustraendo+" es "+resultado);
     return resultado;
@@ -47,9 +47,11 @@ function menu3()
     // Implemente la opción de la calculadora que permite multiplicar.
     console.info("Multiplica:");
     
-    // IMPLEMENTA TU CODIGO AQUÍ 
-
-    return 3;
+    let mult1=parseInt(prompt("Introduzca el prmier numero: ",0));
+    let mult2=parseInt(prompt("Introduzca el segundo numero: ",0));
+    let resultado=mult1*mult2;
+    console.log("El resultado de la multiplicacion "+mult1+" x "+mult2+" es "+resultado);
+    return resultado; 
 }
 
 /**
@@ -60,11 +62,12 @@ function menu3()
 function menu4()
 {
     // Implemente la opción de la calculadora que permite dividir.
-    console.info("Divide:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
-
-    return 4;
+   
+    let div1=parseInt(prompt("Introduzca el prmier numero: ",0));
+    let div2=parseInt(prompt("Introduzca el segundo numero: ",0));
+    let resultado=div1/div2;
+    console.log("El resultado de la division "+div1+" / "+div2+" es "+resultado);
+    return resultado; 
 
 }
 

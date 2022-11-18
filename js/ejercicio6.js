@@ -26,3 +26,20 @@ function obtenerNumeroSecreto(min,max)
     }while(secreto<min || secreto>max)
     return secreto;
 }
+function appMain(){
+    var i = Math.floor(Math.random() * 11);
+    console.log(i)
+    var int2 = prompt('Introduce la cantidad de intentos: ');
+    var intentos=Number.parseInt(int2);
+    document.getElementById("intentos").innerHTML=intentos;
+    do{
+        intentos--;
+        n=prompt('Introduce el número entre 0 y 10: ');
+        if (n == i ) {
+            alert("has acertado") ;break;
+            }
+       
+        document.getElementById("intentos").innerHTML=intentos;
+    }while(intentos>0)
+
+}
