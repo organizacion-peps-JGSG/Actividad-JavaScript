@@ -20,7 +20,7 @@ class Circulo extends Figura{
      */
     calcularArea()
     {       
-        return (-3); // <-- COMPLETA Y CORRIGE EL CÓDIGO
+       return (3.14*this.radio**2); // <-- COMPLETA Y CORRIGE EL CÓDIGO
     }
     /**
      * Calcula el perímetro de la circunferencia,
@@ -28,7 +28,7 @@ class Circulo extends Figura{
      */
     calcularPerimetro()
     {
-        return (2); // <-- COMPLETA Y CORRIGE EL CÓDIGO
+        return (2 * 3,14 * this.radio); // <-- COMPLETA Y CORRIGE EL CÓDIGO
     }
     /**
      * Obtiene el radio del circulo

@@ -1,30 +1,37 @@
 /**
- * @author: Escriba su nombre y apellidos aquí.
- */
-
-/**
  * Comprueba la mayoría de edad
- * @param {int} edad 
+ * @param {*} edad 
  * @returns true | false;
  */
 
 function esMayorEdad(edad)
 {
-    return 0; // Debe escribir el código correcto AQUÍ.
+    var boolEdad;
+    
+    if (edad >= 18 ){boolEdad=true}
+                else{boolEdad=false};
+        
+    return boolEdad;
 }
 /**
  * Obtiene la calificación equivalente a la nota numérica
- * @param {int} nota: entero. 
+ * @param {*} nota: integer. 
  * @returns  cadena: Calificación
  */
 function obtenerCalificacion(nota)
 {
-    var calificacion="Incorrecta";
+            var calificacion="Incorrecta";
 
             // Estructura de control *** switch(nota) ***
-            
-            // Complete el codigo AQUÍ
-
+            // Completa el código de la función
+            if(nota < 0){calificacion="Incorrecta"}
+            if(nota < 3 && nota >= 0){calificacion="Muy deficiente"}
+            else if(nota >= 3 && nota <5){calificacion = "Insuficiente"}
+            else if(nota >= 5 && nota <6){calificacion = "Suficiente"}
+            else if(nota >= 6 && nota <7){calificacion = "Bien"}
+            else if(nota >= 7 && nota <9){calificacion = "Notable"}
+            else if(nota >= 9 && nota <=10){calificacion = "Sobresaliente"}
+            else{calificacion="Incorrecta"}
             return calificacion;
 }
 /**
@@ -35,10 +42,7 @@ function comprobarEdad()
     var edad=Number.parseInt(document.getElementById("edad").value);
     console.log('Edad: '+edad);
     console.log('Mayoría de edad?: '+esMayorEdad(edad));
-    var txtEdad="Usted es menor de edad."
-    
-    if(esMayorEdad(edad))
-        txtEdad="Usted es mayor de edad."
+    txtEdad=esMayorEdad(edad)
     
     document.getElementById("txtEdad").innerHTML=txtEdad;
     
@@ -51,6 +55,7 @@ function averiguarCalificacion()
     var nota=Number.parseInt(document.getElementById("nota").value);
     console.log('Nota: '+nota);
     console.log('Calificación: '+obtenerCalificacion(nota));
+    
         
     document.getElementById("txtCalificacion").innerHTML="Calificación: "+obtenerCalificacion(nota);
 }

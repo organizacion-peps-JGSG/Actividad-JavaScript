@@ -1,4 +1,3 @@
-<!-- Escribe tu nombre aquí -->
 <html lang="es">
     <head>
         <title>Ejercicio 4. Calcular nota</title>
@@ -19,12 +18,47 @@
         <script>
             
             // Solicita una nota por teclado
-            var nota=prompt('Introduzca la nota ');
+            var n=prompt('Introduzca la nota ');
             var calificacion="";
+            var nota=Number.parseInt(n);
 
             // Estructura de control *** switch(nota) ***
-            
-            // Repetimos el ejercicio 3 con estructura de control switch - case
+            switch(nota){
+                case 1:
+                    calificacion="Muy deficiente."
+                    break;
+                case 2:
+                    calificacion="Muy deficiente."
+                    break;
+                case 3:
+                    calificacion="Insuficiente."
+                    break;
+                case 4:
+                    calificacion="Insuficiente."
+                    break;
+                case 5:
+                    calificacion="Suficiente."
+                    break;
+                case 6:
+                    calificacion="Bien"
+                    break;
+                case 7:
+                    calificacion="Notable."
+                    break;
+                case 8:
+                    calificacion="Notable."
+                    break;
+                case 9:
+                    calificacion="Sobresaliente."
+                    break;
+                case 10:
+                    calificacion="Sobresaliente."
+                    break;
+                default:
+                    calificacion="error,nota mayor que 10"
+                    break;
+
+            }
 
             alert('Una nota de '+nota+' es '+calificacion);
             console.log('Una nota de '+nota+' es '+calificacion);

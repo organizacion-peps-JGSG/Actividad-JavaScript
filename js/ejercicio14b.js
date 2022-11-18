@@ -4,10 +4,28 @@
  * @returns media
  * @author: Autor/a
  */
+ function getTotal(acc, act) {
+    return acc + act;
+  }
+  function getMin(acc, act) {
+    if (act < acc ){acc = act}
+    return acc;
+  }
+  function getMax(acc, act) {
+    if (act > acc ){acc = act}
+    return acc;
+  }
+  function checkAprovado(nota) {
+    return nota >= 5;
+  }
+  function checkSuspendido(nota) {
+    return nota < 5;
+  }
 function calcularMedia(v)
 {
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    if (v.length <= 0){return v}
+    let resultado= v.reduce(getTotal) / v.length
+    return resultado;
 }
 /**
  * Obtiene la nota mínima
@@ -16,9 +34,9 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
-    return minima;
+  if (v.length <= 0){return v}
+    let resultado = v.reduce(getMin)
+    return resultado;
 }
 /**
  * Obtiene la nota Máxima
@@ -27,9 +45,9 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
-    return maxima;
+  if (v.length <= 0){return v}
+    let resultado = v.reduce(getMax)
+    return resultado;
 }
 /**
  * Cuenta el número de aprobados
@@ -38,11 +56,9 @@ function calcularMaximo(v)
  */
 function contarAprobados(v)
 {
-    let aprobados=0;
-
-    // COMPLETA TU CODIGO
-
-    return aprobados;
+  if (v.length <= 0){return v}
+    let resultado = v.filter(checkAprovado).length
+    return resultado;
 }
 /**
  * Cuenta el número de suspensos
@@ -51,11 +67,9 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=0;
-    
-    // COMPLETA TU CODIGO
-
-    return suspensos;
+  if (v.length <= 0){return v}
+    let resultado = v.filter(checkSuspendido).length
+    return resultado;;
 }
 
 
@@ -73,6 +87,7 @@ function appMain(){
     var n=-1;
     // Leemos notas desde teclado
     console.info(`Leemos ${numeroNotas} Notas desde teclado.`)
+    if (numeroNotas >0){
     for(let i=0; i<numeroNotas;i++)
     {
         do{
@@ -81,8 +96,9 @@ function appMain(){
         notas[i]=n;
         console.log(`notas[${i}]: ${notas[i]}`);
     }
-
-
+  }
+  
+  console.log(notas)
     console.log("La nota media es "+calcularMedia(notas));
     console.log("La nota mínima es "+calcularMinimo(notas));
     console.log("La nota máxima es "+calcularMaximo(notas));

@@ -7,7 +7,10 @@ class Cuadrado extends Rectangulo{
      */
     constructor(o,l)
     {
+        
         super(o,l,l);
+       
+        this.origen=o;
         this.lado=l;
     }
 /**
