@@ -15,6 +15,9 @@ class Rectangulo extends Figura{
     constructor(o,b,h)
     {
         // COMPLETA EL CÓDIGO
+        super(o);
+        this.base=b;
+        this.altura=h;
     }
     /**
      * Área del Rectángulo.
@@ -23,7 +26,10 @@ class Rectangulo extends Figura{
     calcularArea()
     {
         // COMPLETA EL CODIGO
-        return -1;
+        let area;
+        area=this.base*this.altura;
+        
+        return area;
     }
     /**
      * Base del Rectángulo.
