@@ -23,35 +23,35 @@ function procesarCadenas()
     console.log("Apellidos: "+apellidos);
 
     // Convertimos el NOMBRE a MAYÚSCULAS
-    var NOMBRE="" // <-- SUSTITUYE AQUÍ TU CÓDIGO
-    console.log('NOMBRE: '+NOMBRE);
+    var NOMBRE=document.getElementById("nombre").value; // <-- SUSTITUYE AQUÍ TU CÓDIGO
+    console.log('NOMBRE: '+ NOMBRE.toUpperCase());
     mayusculasHTML.innerHTML=NOMBRE;
 
     // Convertimos el NOMBRE a minusculas
-    console.log('nombre: '+NOMBRE); // <-- CORRIGE ESTE CÓDIGO
+    console.log('nombre: '+NOMBRE.toLowerCase()); // <-- CORRIGE ESTE CÓDIGO
 
     
     // Obtenemos la longitud del NOMBRE
-    var longitud=0; // <-- CORRIGE ESTE CÓDIGO
-    console.log("La longitud de "+nombre+" es "+longitud);
+    var longitud=document.getElementById("nombre").value; // <-- CORRIGE ESTE CÓDIGO
+    console.log("La longitud de "+nombre+" es "+longitud.length);
 
     // Concatena el Nombre y los Apellidos con concat(). 
-    var fullName=""; // <-- NO SUMES ¡¡¡ CONCATENA CON UNA FUNCIÓN !!!
+    var fullName= NOMBRE.concat(" "+apellidos)//document.getElementById("nombre").value+" "+document.getElementById("apellidos").value;// <-- NO SUMES ¡¡¡ CONCATENA CON UNA FUNCIÓN !!!
     // Obtén la longitud de la nueva cadena.
-    var longitudFull=-1; // <-- COMPLETA EL CÓDIGO CORRECTO
+    var longitudFull=fullName.length; // <-- COMPLETA EL CÓDIGO CORRECTO
     console.log(`Nombre completo: ${fullName} (${longitudFull})`);
     fullNameHTML.innerHTML=fullName+" ("+longitudFull+")";
     
     // Del Nombre completo extrae la subcadena comprendida entre las posiciones 5 y 10.
-    var extracto="cOMPleTA el CoDiGo"; // <-- CORRIGE Y COMPLETA EL CODIGO
+    var extracto=fullName.substring(5,10); // <-- CORRIGE Y COMPLETA EL CODIGO
     console.log("Extracto [5 a 10]: "+extracto);
 
     // Del Nombre completo extrae los 3 primeros carácteres.
-    extracto="XxXWyudrh"; // <-- CORRIGE Y COMPLETA EL CÓDIGO
+    extracto=fullName.substring(0,3); // <-- CORRIGE Y COMPLETA EL CÓDIGO
     console.log("Tres primeros carácteres: "+extracto);
 
     // En el Nombre completo remplaza Pedro por Antonio
-    var nuevoNombre="EsTo eS kAKa ;)-"; // <-- CORRIGE Y COMPLETA EL CÓDIGO
+    var nuevoNombre=fullName.replace(NOMBRE,"Antonio"); // <-- CORRIGE Y COMPLETA EL CÓDIGO
     console.log("Nuevo nombre: "+nuevoNombre);
 
 

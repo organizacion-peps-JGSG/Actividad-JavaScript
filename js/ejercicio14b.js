@@ -4,33 +4,59 @@
  * @returns media
  * @author: Autor/a
  */
-function calcularMedia(v)
+function calcularMedia(notas)
 {
     // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    var media=0, i=0, arraylen=notas.length;
+
+  
+    if (notas.length>0){
+        var suma = notas.reduce(
+        (previousValue, currentValue) => previousValue + currentValue);
+        media = suma/arraylen;
+    }
+    else {
+        media=0;
+    }
+    return media;
 }
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
  * @returns minima
  */
-function calcularMinimo(v)
+function calcularMinimo(notas)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
+   // let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+  let minima;
+    if (notas.length>0){
+        minima = notas.reduce((a, b) => Math.min(a, b));
+        }
+    else{
+        minima=0;
+    }
     return minima;
-}
+    }
+
+  
 /**
  * Obtiene la nota Máxima
  * @param {Array} v 
  * @returns maxima
  */
-function calcularMaximo(v)
+function calcularMaximo(notas)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
+    let maxima;
+    //let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (notas.length>0){
+         maxima = notas.reduce((a, b) => Math.max(a, b));
+    }
+    else{
+        maxima=0;
+    }
     return maxima;
 }
+
 /**
  * Cuenta el número de aprobados
  * @param {Array} v 
@@ -38,11 +64,16 @@ function calcularMaximo(v)
  */
 function contarAprobados(v)
 {
-    let aprobados=0;
+    let aprobados=v.filter(apr);
+    ;
+
+    function apr(nota) {
+      return nota >= 5;
+    }
 
     // COMPLETA TU CODIGO
 
-    return aprobados;
+    return aprobados.length;
 }
 /**
  * Cuenta el número de suspensos
@@ -51,11 +82,16 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=0;
-    
+    let suspensos=v.filter(susp);
+    ;
+
+    function susp(nota) {
+      return nota < 5;
+    }
+
     // COMPLETA TU CODIGO
 
-    return suspensos;
+    return suspensos.length;
 }
 
 
@@ -68,7 +104,11 @@ function contarSuspensos(v)
 function appMain(){
 
     // Indique cuantas notas desea introducir
-    let numeroNotas=parseInt(prompt("¿Cuantas notas desea introdurcir?"));
+    do{
+        var numeroNotas=prompt("¿Cuantas notas desea introdurcir?");
+    }while (isNaN(numeroNotas) || numeroNotas.trim() =='' || numeroNotas<=0);
+
+   
     let notas=new Array();
     var n=-1;
     // Leemos notas desde teclado
@@ -98,4 +138,5 @@ module.exports={
     calcularMinimo,
     contarAprobados,
     contarSuspensos,
-};
+}
+

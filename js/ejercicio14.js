@@ -7,17 +7,40 @@
 function calcularMedia(v)
 {
     // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    var media=0, i,  suma=0;
+    if (v.length>0){
+    for (i=0; i< v.length;i++){
+        suma=suma + v[i];
+        
+    }
+    media=suma/v.length;
+    }
+    else {
+        media=0;
+    }
+    return media;
 }
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
  * @returns minima
  */
-function calcularMinimo(v)
+function calcularMinimo(notas)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    let minima=Number.MAX_VALUE,i=0, arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
+    if (notas.length>0){
+
+    while(i< arraylen){
+       if  (minima > notas[i]){
+        minima=notas[i];
+       }
+        i++;
+        }
+    }
+    else {
+        minima=0;
+    }
     return minima;
 }
 /**
@@ -25,10 +48,23 @@ function calcularMinimo(v)
  * @param {Array} v 
  * @returns maxima
  */
-function calcularMaximo(v)
+function calcularMaximo(notas)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
+    let maxima=Number.MIN_VALUE
+    ,i=0
+    ,arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    
+    if (notas.length>0){
+        while(i< arraylen){
+            if  (maxima < notas[i]){
+            maxima=notas[i];
+                }
+            i++;
+        }
+    }
+    else {
+        maxima =0;
+        }
     return maxima;
 }
 /**
@@ -36,12 +72,19 @@ function calcularMaximo(v)
  * @param {Array} v 
  * @returns aprobados: número de aprobados.
  */
-function contarAprobados(v)
+function contarAprobados(notas)
 {
-    let aprobados=0;
-
-    // COMPLETA TU CODIGO
-
+    let aprobados=0
+    ,i=0
+    ,arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    
+        while(i< arraylen){
+            if  (notas[i]>=5){
+                aprobados++;
+                }
+            i++;
+        }
+   // COMPLETA TU CODIGO
     return aprobados;
 }
 /**
@@ -49,12 +92,19 @@ function contarAprobados(v)
  * @param {Array} v 
  * @returns suspensos: número de suspensos.
  */
-function contarSuspensos(v)
+function contarSuspensos(notas)
 {
-    let suspensos=0;
+    let suspensos=0
+    ,i=0
+    ,arraylen=notas.length; // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
+        while(i< arraylen){
+            if  (notas[i]<5){
+                suspensos++;
+                }
+            i++;
+        }
     // COMPLETA TU CODIGO
-
     return suspensos;
 }
 
@@ -62,13 +112,15 @@ function contarSuspensos(v)
 
 /**
  * Aplicacion principal Ejercicio14
- * @author: José Gaspar Sánchez García
+ * @author: Diego Gonzalo De Maio
  */
 
 function appMain(){
 
     // Indique cuantas notas desea introducir
-    let numeroNotas=parseInt(prompt("¿Cuantas notas desea introdurcir?"));
+    do{
+        var numeroNotas=prompt("¿Cuantas notas desea introdurcir?");
+    }while (isNaN(numeroNotas) || numeroNotas.trim() =='' || numeroNotas<=0);
     let notas=new Array();
     var n=-1;
     // Leemos notas desde teclado
@@ -92,6 +144,7 @@ function appMain(){
 }
 
 // Exportamos las funciones para poder realizar el Testing
+
 module.exports={
     calcularMedia,
     calcularMaximo,

@@ -8,7 +8,7 @@
         <h1>Ejercicio 9. Bucle do-while: Tabla de multiplicar</h1>
         <p>Modifique este HTML</p>
         <script>
-            let i=0;
+            let j=0;
             /* IMPLEMENTA TU CODIGO AQUÍ
             hacer:
                 document.writeln("Tabla de multiplicar del "+i+"<br/>");
@@ -22,6 +22,28 @@
                 document.writeln("<br/>");
                 i++;
             mientras i<=10 */
+
+
+            do{
+            
+            
+             document.write("<h2>Tabla de multiplicar del "+ j +"</h2>");
+
+             document.write("---------------------------------------------------------------------------<br/>");
+             let i=0;
+//i++ significa i=i+1;
+
+            do{
+                document.write("<br/>");
+                document.write(j + "x " + i + "= " + j * i);
+                document.write("<br/>");
+                i++;
+            }while(i<=10)
+            {
+            document.write("<br/>");
+            }
+            j++;
+        }while(j<=10)
         </script>
     </body>
 </html>

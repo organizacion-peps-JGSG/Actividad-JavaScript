@@ -10,7 +10,8 @@
 
 function esMayorEdad(edad)
 {
-    return 0; // Debe escribir el código correcto AQUÍ.
+   
+    return (edad >= 18); // Debe escribir el código correcto AQUÍ.
 }
 /**
  * Obtiene la calificación equivalente a la nota numérica
@@ -23,7 +24,34 @@ function obtenerCalificacion(nota)
 
             // Estructura de control *** switch(nota) ***
             
+            var calificacion="";
+            var n=Number.parseInt(nota); 
             // Complete el codigo AQUÍ
+            switch(n){
+                case 0:
+                case 1:
+                case 2:calificacion="Muy deficiente";
+                break;
+                case 3:
+                case 4:
+                calificacion="Insuficiente";
+                break;
+                case 5:
+                calificacion="Suficiente";
+                break;
+                case 6:
+                calificacion="Bien";
+                break;
+                case 7:
+                case 8:
+                calificacion="Notable";
+                break;
+                case 9:
+                case 10:
+                calificacion="Sobresaliente";
+                break;
+               default: calificacion= "Incorrecta";
+            }
 
             return calificacion;
 }

@@ -19,8 +19,9 @@ class Circulo extends Figura{
      * @returns area:float
      */
     calcularArea()
-    {       
-        return (-3); // <-- COMPLETA Y CORRIGE EL CÓDIGO
+    {    
+        let area= (this.radio^2)*Math.PI;
+        return area; // <-- COMPLETA Y CORRIGE EL CÓDIGO
     }
     /**
      * Calcula el perímetro de la circunferencia,
@@ -28,7 +29,9 @@ class Circulo extends Figura{
      */
     calcularPerimetro()
     {
-        return (2); // <-- COMPLETA Y CORRIGE EL CÓDIGO
+        let perimetro;
+        perimetro= 2*Math.PI*this.radio;
+        return perimetro; // <-- COMPLETA Y CORRIGE EL CÓDIGO
     }
     /**
      * Obtiene el radio del circulo
