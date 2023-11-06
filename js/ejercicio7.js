@@ -10,6 +10,15 @@ function fibonacci(n)
     
     
     // ESCRIBE TU CÓDIGO AQUÍ
+
+    vector = [0,1]
+
+    for (let i = 2; i<=n;i++)
+    {
+        vector[i] = vector[i-2] + vector[i-1];
+    }
+
+
     
     
     return vector; // Retorno de la función

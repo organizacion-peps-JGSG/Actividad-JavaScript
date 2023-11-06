@@ -15,12 +15,14 @@
         <p id="resultado">Cada amigo tiene que pagar: </p>
         <script>
             // Declaramos las constantes kTOTAL y kPERSONAS
-            
+            const kTOTAL = 102;
+            const kPERSONAS = 6;
             // Declaramos la variable resultado y calculamos la división de reparto
             
+            let resultado = 102 / 6;
             // Mostramos el resultado por consola
-            console.log('Cada amigo tiene que pagar: '+resultado+' €uros.');
-            document.getElementById("resultado").innerHTML+=resultado+' €uros.';   
+            console.log('Cada amigo tiene que pagar: '+ resultado+' € euros.');
+            document.getElementById("resultado").innerHTML+= resultado+' € euros.';   
         </script>
     </body>
 </html>
