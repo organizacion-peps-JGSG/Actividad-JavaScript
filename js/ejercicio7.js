@@ -7,7 +7,25 @@
 function fibonacci(n)
 {
     let vector=new Array(); // Creamos un vector para alamcenar el cálculo
-    
+
+
+    if (n<1){
+        return vector
+    }else if(n==1){
+        vector.push(1)
+        return vector
+    }else if(n >=2){
+        vector.push(1)
+        vector.push(1)
+
+        for(i= 2; i<= n ; i++){
+            vector.push(vector[i - 1] + vector[i - 2])
+        }
+        
+        
+        }else if(n==1){
+            vector[0]=1
+        }
     
     // ESCRIBE TU CÓDIGO AQUÍ
     
