@@ -124,8 +124,7 @@ function geoApp()
         console.log("Dibujado triángulo.");
     });
 
-
-
+    
      // Programamos el comportamiento del botón Circulo
      btnCirculo.addEventListener("click",function(){
         let x1=parseInt(prompt("Centro.x: "));
