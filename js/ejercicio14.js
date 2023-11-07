@@ -6,8 +6,20 @@
  */
 function calcularMedia(v)
 {
+
     // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    if (v.length === 0) {
+        return 0; // Manejo de array vacío para evitar división por cero
+    }
+
+    let suma = 0;
+    for (let i = 0; i < v.length; i++) {
+        suma += v[i]; 
+    }
+
+    let media = suma / v.length; 
+
+    return media;
 }
 /**
  * Obtiene la nota mínima
@@ -16,8 +28,18 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
+    if (v.length === 0) {
+        return undefined; // Manejo de array vacío
+    }
+
+    let minima = v[0]; // Inicializa con el primer elemento del array
+
+    for (let i = 1; i < v.length; i++) {
+        if (v[i] < minima) {
+            minima = v[i]; // Si se encuentra un valor menor, se actualiza 'minima'
+        }
+    }
+
     return minima;
 }
 /**
@@ -27,7 +49,16 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (v.length === 0) {
+        return undefined; 
+    }
+
+    let maxima = v[0]; 
+    for (let i = 1; i < v.length; i++) {
+        if (v[i] > maxima) {
+            maxima = v[i]; 
+        }
+    }
 
     return maxima;
 }
@@ -38,9 +69,14 @@ function calcularMaximo(v)
  */
 function contarAprobados(v)
 {
-    let aprobados=0;
+    let aprobados = 0;
+    const umbralAprobacion = 5; 
 
-    // COMPLETA TU CODIGO
+    for (let i = 0; i < v.length; i++) {
+        if (v[i] >= umbralAprobacion) {
+            aprobados++;
+        }
+    }
 
     return aprobados;
 }
@@ -51,9 +87,14 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=0;
-    
-    // COMPLETA TU CODIGO
+    let suspensos = 0;
+    const umbralSuspension = 5; 
+
+    for (let i = 0; i < v.length; i++) {
+        if (v[i] < umbralSuspension) {
+            suspensos++;
+        }
+    }
 
     return suspensos;
 }

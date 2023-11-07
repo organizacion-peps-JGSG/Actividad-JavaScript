@@ -86,6 +86,9 @@ function menu4()
 
     resultado = dividendo / divisor;
 
+    console.log("El resultado de la división "+dividendo+" / "+divisor+" es "+resultado);
+
+
     return resultado;
 
 }
