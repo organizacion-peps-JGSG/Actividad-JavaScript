@@ -22,7 +22,7 @@ function calcularMedia(v)
 function calcularMinimo(v)
 {
     if (v.length === 0) {
-        return undefined; // Manejo de array vacío
+        return 0; // Manejo de array vacío
     }
 
     const minimo = v.reduce((min, current) => (current < min ? current : min), v[0]);
@@ -36,7 +36,7 @@ function calcularMinimo(v)
 function calcularMaximo(v)
 {
     if (v.length === 0) {
-        return undefined; // Manejo de array vacío
+        return 0; // Manejo de array vacío
     }
 
     const maximo = v.reduce((max, current) => (current > max ? current : max), v[0]);

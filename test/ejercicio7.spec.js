@@ -18,27 +18,27 @@ describe('Test de prueba Ejercicio 7. Series de Fibonacci;', () => {
             assert.isArray(v, "El resultado debe ser un array");
         });
 
-        it('fibonacci(5) --> Longitud = 5', () => {
+        it('fibonacci(5) --> Longitud = 6', () => {
             const v=fibonacci(5);
-            assert.lengthOf(v, 5, "Longitud "+v.length);
+            assert.lengthOf(v, 6, "Longitud "+v.length);
         });
 
         it('fibonacci(5)', () => {
             const v=fibonacci(5);
-            const sal=[1,1,2,3,5];
+            const sal=[0,1,1,2,3,5];
             assert.isArray(v, "El resultado debe ser un array");
             for(let i=0;i<v.length;i++)
                 assert.equal(v[i], sal[i], "Elemento "+i+" incorrecto.");
         });
 
-        it('fibonacci(8) --> Longitud = 8', () => {
+        it('fibonacci(8) --> Longitud = 9', () => {
             const v=fibonacci(8);
-            assert.lengthOf(v, 8, "Longitud "+v.length);
+            assert.lengthOf(v, 9, "Longitud "+v.length);
         });
 
         it('fibonacci(8)', () => {
             const v=fibonacci(8);
-            const sal=[1,1,2,3,5,8,13,21];
+            const sal=[0,1,1,2,3,5,8,13,21];
             assert.isArray(v, "El resultado debe ser un array");
             for(let i=0;i<v.length;i++)
                 assert.equal(v[i], sal[i], "Elemento "+i+" incorrecto.");
@@ -78,14 +78,14 @@ describe('Test de prueba Ejercicio 7. Series de Fibonacci;', () => {
             assert.isArray(v, "fibonacci(1) es un Array.");
         });
         
-        it('fibonacci(1) --> Longitud = 1', () => {
+        it('fibonacci(1) --> Longitud = 2', () => {
             const v=fibonacci(1);
-            assert.lengthOf(v, 1, "Longitud "+v.length);
+            assert.lengthOf(v, 2, "Longitud "+v.length);
         });
 
         it('fibonacci(1) --> [1]', () => {
             const v=fibonacci(1);
-            const sal=[1];
+            const sal=[0,1];
             assert.isArray(v, "El resultado debe ser un array");
             for(let i=0;i<v.length;i++)
                 assert.equal(v[i], sal[i], "Elemento "+i+" incorrecto.");
@@ -100,14 +100,14 @@ describe('Test de prueba Ejercicio 7. Series de Fibonacci;', () => {
             assert.isArray(v, "fibonacci(2) es un Array.");
         });
         
-        it('fibonacci(2) --> Longitud = 2', () => {
+        it('fibonacci(2) --> Longitud = 3', () => {
             const v=fibonacci(2);
-            assert.lengthOf(v, 2, "Longitud "+v.length);
+            assert.lengthOf(v, 3, "Longitud "+v.length);
         });
 
-        it('fibonacci(2) --> [1 1]', () => {
+        it('fibonacci(2) --> [0,1 1]', () => {
             const v=fibonacci(2);
-            const sal=[1, 1];
+            const sal=[0,1, 1];
             assert.isArray(v, "El resultado debe ser un array");
             for(let i=0;i<v.length;i++)
                 assert.equal(v[i], sal[i], "Elemento "+i+" incorrecto.");

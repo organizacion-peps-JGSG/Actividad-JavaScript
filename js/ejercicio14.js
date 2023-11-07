@@ -29,7 +29,7 @@ function calcularMedia(v)
 function calcularMinimo(v)
 {
     if (v.length === 0) {
-        return undefined; // Manejo de array vacío
+        return 0; // Manejo de array vacío
     }
 
     let minima = v[0]; // Inicializa con el primer elemento del array
@@ -50,7 +50,7 @@ function calcularMinimo(v)
 function calcularMaximo(v)
 {
     if (v.length === 0) {
-        return undefined; 
+        return 0; 
     }
 
     let maxima = v[0]; 

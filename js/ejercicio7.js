@@ -8,6 +8,10 @@ function fibonacci(n)
 {
     let vector=new Array(); // Creamos un vector para alamcenar el cálculo
     
+
+    if (n == 0 || n<0){
+        return vector;
+    }
     
     // ESCRIBE TU CÓDIGO AQUÍ
 
