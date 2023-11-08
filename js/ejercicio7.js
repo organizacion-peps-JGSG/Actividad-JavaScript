@@ -18,10 +18,9 @@ function fibonacci(n)
         vector.push(1)
         vector.push(1)
 
-        for(i= 2; i<= n ; i++){
+        for(i = 2; i < n ; i++){
             vector.push(vector[i - 1] + vector[i - 2])
         }
-        
         
         }else if(n==1){
             vector[0]=1

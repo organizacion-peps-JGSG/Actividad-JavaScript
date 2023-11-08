@@ -37,7 +37,7 @@ function obtenerCalificacion(nota)
         case nota >=6 && nota <7:
             calificacion = 'Bien';
             break;
-        case nota >=7 && nota <8:
+        case nota >=7 && nota <=8:
             calificacion = 'Notable';
             break;
         case nota >=8 && nota <=10:

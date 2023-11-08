@@ -5,11 +5,12 @@
  * @author: Autor/a
  */
 function calcularMedia(v) {
-    const sum = v.reduce(
-        (accumulator, currentValue) => accumulator + currentValue
-    );
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return sum / v.length;
+    if (v.length > 0) {
+        const sum = v.reduce((accumulator, currentValue) => accumulator + currentValue);
+        // IMPLEMENTA TU CODIGO AQUÍ
+        return sum / v.length;
+    }
+    return 0;
 }
 
 /**
@@ -18,24 +19,33 @@ function calcularMedia(v) {
  * @returns minima
  */
 function calcularMinimo(v) {
-    let minima = 10; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    minima = v.reduce(function (v) {
-        return v < minima;
-    });
-    return minima;
+    if (v.length > 0) {
+        let minima = 10; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+        minima = v.reduce((accumulator, currentValue) => {
+            return Math.min(accumulator, currentValue);
+        }, v[0]);
+        return minima;
+    }
+    return 0;
 }
 
 /**
  * Obtiene la nota Máxima
  * @param {Array} v
- * @returns maxima
+ * @returns number
  */
 function calcularMaximo(v) {
-    let maxima = 0; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    maxima = v.reduce(function (v) {
-        return v > maxima;
-    });
-    return maxima;
+    if (v.length > 0) {
+        let maxima = 0;
+
+        maxima = v.reduce((accumulator, currentValue) => {
+            return Math.max(accumulator, currentValue);
+        }, v[0]);
+
+        return maxima;
+    }
+    return 0;
+
 }
 
 /**
@@ -48,7 +58,6 @@ function contarAprobados(v) {
     aprobados = v.filter(function (x) {
         return x >= 5
     });
-    // COMPLETA TU CODIGO
 
     return aprobados.length;
 }
@@ -101,9 +110,5 @@ function appMain() {
 
 // Exportamos las funciones para poder realizar el Testing
 module.exports = {
-    calcularMedia,
-    calcularMaximo,
-    calcularMinimo,
-    contarAprobados,
-    contarSuspensos,
+    calcularMedia, calcularMaximo, calcularMinimo, contarAprobados, contarSuspensos,
 };
