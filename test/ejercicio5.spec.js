@@ -1,6 +1,6 @@
 /**
  * Pruebas unitarias Ejercicio 5. Funciones
- * @author: José Gaspar Sánchez García.
+ * @author: Mario Davó Asensio.
  */
 
 const chai = require('chai');

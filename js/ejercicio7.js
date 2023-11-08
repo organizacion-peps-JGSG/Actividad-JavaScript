@@ -35,7 +35,7 @@ function fibonacci(n)
 
 /**
  * Aplicación principal Ejercicio 7
- * @author: José Gaspar Sánchez García
+ * @author: Mario Davó Asensio
  */
 function appMain()
 {

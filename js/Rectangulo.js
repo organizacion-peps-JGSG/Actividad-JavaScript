@@ -1,6 +1,6 @@
 /**
  * Clase Rectángulo
- * @author: José Gaspar Sánchez García
+ * @author: Mario Davó Asensio
  */
 class Rectangulo extends Figura{
     base=0;
@@ -14,6 +14,9 @@ class Rectangulo extends Figura{
      */
     constructor(o,b,h)
     {
+        super(o);
+        this.setBase(b);
+        this.setAltura(h);
         // COMPLETA EL CÓDIGO
     }
     /**
@@ -22,8 +25,7 @@ class Rectangulo extends Figura{
      */
     calcularArea()
     {
-        // COMPLETA EL CODIGO
-        return -1;
+        return this.getBase()*this.getAltura();
     }
     /**
      * Base del Rectángulo.

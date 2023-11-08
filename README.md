@@ -1,7 +1,7 @@
 ![Logotipos ME-GVA CEICE-FP CV-FSE](/imagenes/Logotipos.png)
 # Puesta en Producción Segura: Lenguajes de programación.
 ## Ejercicios de Programación con JavaScript
-### Profesor José Gaspar Sánchez García.
+### Profesor Mario Davó Asensio.
 Alumno:
 
 * [Ejercicio 0](ejercicio0.html). Prueba los distintos mensajes que puede emitir JavaScript.

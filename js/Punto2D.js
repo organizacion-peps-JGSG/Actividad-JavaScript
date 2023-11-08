@@ -41,7 +41,7 @@ class Punto2D{
      * Calcula la distancia cuadrática a otro punto 2D
      * @param {*} otroPunto: punto2D 
      * @returns distancia
-     * @author José Gaspar Sánchez García. 
+     * @author Mario Davó Asensio. 
      */
     distancia(otroPunto)
     {
@@ -52,7 +52,7 @@ class Punto2D{
      * Mover el Punto2D a otras coordenadas X e Y
      * @param {*} dx: nueva coordenada X. 
      * @param {*} dy: nueva coordenada Y.
-     * @author José Gaspar Sánchez García 
+     * @author Mario Davó Asensio 
      */
     moverA(dx,dy)
     {

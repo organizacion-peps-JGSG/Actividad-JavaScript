@@ -1,6 +1,6 @@
 /**
  * Pruebas unitarias Ejercicio 7. Series de Fibonacci
- * @author: José Gaspar Sánchez García.
+ * @author: Mario Davó Asensio.
  */
 
 const chai = require('chai');
