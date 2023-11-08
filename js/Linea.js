@@ -160,7 +160,7 @@ class Figura{
  * Movemos el punto de origen de la Figura
  * @param {int} x; coordenada X nuevo punto 2d 
  * @param {int} y: coordenada Y nuevo punto 2d
- * @author: José Gaspar Sánchez García
+ * @author: Mario Davó Asensio
  */
     moverA(x,y)
     {

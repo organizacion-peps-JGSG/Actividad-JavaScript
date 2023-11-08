@@ -12,7 +12,7 @@ function menu1()
 {
     // Implemente la opción de la calculadora que permite sumar.
     console.info("Suma:");
-    let sumando1=parseInt(prompt("Introduzca el prmier sumando: ",0));
+    let sumando1=parseInt(prompt("Introduzca el primer sumando: ",0));
     let sumando2=parseInt(prompt("Introduzca el segundo sumando: ",0));
     let resultado=sumando1+sumando2;
     console.log("El resultado de la suma "+sumando1+" + "+sumando2+" es "+resultado);
@@ -28,11 +28,10 @@ function menu2()
 {
     // Implemente la opción de la calculadora que permite restar.
     console.info("Resta:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
-    let minuendo=0;
-    let sustraendo=0;
-    let resultado=-1;
+
+    let minuendo=parseInt(prompt("Introduzca el minuendo: ",0));;
+    let sustraendo=parseInt(prompt("Introduzca el sustraendo: ",0));
+    let resultado=minuendo-sustraendo;
 
     console.log("El resultado de la resta "+minuendo+" - "+sustraendo+" es "+resultado);
     return resultado;
@@ -46,8 +45,12 @@ function menu3()
 {
     // Implemente la opción de la calculadora que permite multiplicar.
     console.info("Multiplica:");
-    
-    // IMPLEMENTA TU CODIGO AQUÍ 
+
+    let numero=parseInt(prompt("Introduzca el primer numero: ",0));;
+    let multiplicador=parseInt(prompt("Introduzca el multiplicador: ",0));
+    let resultado=numero*multiplicador;
+
+    console.log("El resultado de la multiplicación "+numero+" x "+multiplicador+" es "+resultado);
 
     return 3;
 }
@@ -61,8 +64,12 @@ function menu4()
 {
     // Implemente la opción de la calculadora que permite dividir.
     console.info("Divide:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
+
+    let dividendo=parseInt(prompt("Introduzca el dividendo: ",0));;
+    let divisor=parseInt(prompt("Introduzca el divisor: ",0));
+    let resultado=dividendo/divisor;
+
+    console.log("El resultado de la división "+dividendo+" / "+divisor+" es "+resultado);
 
     return 4;
 
@@ -70,7 +77,7 @@ function menu4()
 
 /**
  * Menú Aplicación Calculadora
- * @author: José Gaspar Sánchez García.
+ * @author: Mario Davó Asensio.
  */
 function appMenu()
 {

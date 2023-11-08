@@ -10,7 +10,7 @@ window.addEventListener("load",function() {
 /**
  * Función principal de la Aplicación de Geometría
  * @returns 
- * @author José Gaspar Sánchez García
+ * @author Mario Davó Asensio
  */
 function geoApp()
 {

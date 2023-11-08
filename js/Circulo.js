@@ -1,6 +1,6 @@
 /**
  * Clase Circulo
- * @author: José Gaspar Sánchez García.
+ * @author: Mario Davó Asensio.
  */
 class Circulo extends Figura{
     radio=0;

@@ -22,7 +22,21 @@ function obtenerNumeroSecreto(min,max)
     var secreto=0;
     do{
         suerte=Math.random()*max;
-        var secreto=Number.parseInt(suerte)+max;
+        var secreto=Number.parseInt(suerte);
     }while(secreto<min || secreto>max)
     return secreto;
 }
+
+var intentos=window.prompt('Introduce el número de intentos: ');
+let secret = obtenerNumeroSecreto(0, 10);
+console.log(secret);
+do{
+    if(secret == tirarDado()){
+        document.getElementById("resultado").innerHTML='Lo has encontrado, el número era '+ secret;
+        break;
+    }
+
+
+    intentos--;
+    document.getElementById("intentos").innerHTML=intentos;
+}while(intentos>0)

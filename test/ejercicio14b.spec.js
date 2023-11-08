@@ -1,6 +1,6 @@
 /**
  * Pruebas unitarias Ejercicio 14b. Arrays - Estadísticas de notas 
- * @author: José Gaspar Sánchez García.
+ * @author: Mario Davó Asensio.
  */
 
  const chai = require('chai');

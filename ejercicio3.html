@@ -1,7 +1,7 @@
 <!-- Escribe aquí tu nombre-->
 <html lang="es">
     <head>
-        <title>Ejercicio 4. Calcular nota</title>
+        <title>Ejercicio 3. Calcular nota</title>
     </head>
     <body>
         <h1>Cálculo de notas</h1>
@@ -25,6 +25,21 @@
 
             // Estructura de control *** if - else ***
 
+                if(nota >=0 && nota <3){
+                    calificacion = 'Muy deficiente';
+                }else if(nota >=3 && nota <5){
+                    calificacion = 'Insuficiente';
+                }else if(nota >=5 && nota <6){
+                    calificacion = 'Suficiente';
+                }else if(nota >=6 && nota <7){
+                    calificacion = 'Bien';
+                }else if(nota >=7 && nota <8){
+                    calificacion = 'Notable';
+                }else if(nota >=8 && nota <=10){
+                    calificacion = 'Sobresaliente';
+                }else{
+                    calificacion = 'Sin nota';
+                }
             /*
             si n>=0 y n <3 entonces
                 calificacion <-- Muy deficiente
