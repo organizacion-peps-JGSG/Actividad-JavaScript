@@ -8,16 +8,26 @@ function fibonacci(n)
 {
     let vector=new Array(); // Creamos un vector para alamcenar el cálculo
     
-    
-    // ESCRIBE TU CÓDIGO AQUÍ
-    
+    if (n <= 0){
+        return vector;
+    } else if (n == 1){
+        vector.push(0);
+    }else if (n == 2){
+        vector.push(0,1);
+    }else{
+        vector = [0,1];
+        for (let i=2; i <n; i++){
+            vector.push(vector[i -1] + vector[i-2]);
+        }
+    }
+  
     
     return vector; // Retorno de la función
 }
 
 /**
  * Aplicación principal Ejercicio 7
- * @author: José Gaspar Sánchez García
+ * @author: Manuel Felipe Sánchez Córdoba
  */
 function appMain()
 {

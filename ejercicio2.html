@@ -6,24 +6,22 @@
     <body>
         <h1>Comprobar mayoría de edad</h1>
             <p> Pide la edad y si es mayor de 18 años indica que ya puede conducir. </p>
-        <script>
+            <script>
+                // Solicita edad por teclado
+                var edad = prompt('¿Cuántos años tienes? ');
             
-            // Solicita edad por teclado
-            
-             var edad=prompt('¿Cuantos años tienes? ');
-
-            // Comprobamos que el valor introducido es un numero
-            if (!isNaN(edad)){
-                edad = Number(edad);
-                if (edad < 18){
-                    alert('Usted no tiene edad para conducir')
-                }else{
-                    alert('Usted ya es mayor de dad; por tanto, ya podria conducir')
+                // Comprobamos que el valor introducido es un número
+                if (!isNaN(edad)) {
+                    edad = Number(edad);
+                    if (edad < 18) {
+                        alert('Usted no tiene la edad suficiente para conducir.');
+                    } else {
+                        alert('Usted ya es mayor de edad; por tanto, ya podría conducir.');
+                    }
+                } else {
+                    alert('Por favor, introduce un número válido.');
                 }
-            }else{
-                alert('Por favor, introduce un numero valido')
-            }
+            </script>
             
-        </script>
     </body>
 </html>

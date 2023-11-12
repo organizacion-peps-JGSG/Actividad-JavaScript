@@ -1,4 +1,4 @@
-<!-- Escribe tu nombre aquí -->
+<!-- Manuel Felipe Sánchez Córdoba -->
 <html lang="es">
     <head>
         <title>Ejercicio 4. Calcular nota</title>
@@ -17,15 +17,34 @@
             <p>Repite el ejercicio anterior utilizando la estructura <code>switch</code></p>
         
         <script>
-            
-            // Solicita una nota por teclado
+             // Solicita una nota por teclado
             var nota=prompt('Introduzca la nota ');
             var calificacion="";
 
             // Estructura de control *** switch(nota) ***
-            
+            switch (true){
+                case (nota >= 0 && nota < 3):
+                calificacion = "Muy deficiente";
+                break;
+                case (nota >= 3 && nota < 5):
+                calificacion = "Insuficiente";
+                break;
+                case (nota >= 5 && nota <6 ):
+                calificacion = "Suficiente"
+                break;
+                case (nota >= 6 && nota <7):
+                calificacion = "Bien"
+                break;
+                case (nota >= 7 && nota <9):
+                calificacion = "Notable"
+                break;
+                case (nota >= 9 && nota <=10):
+                calificacion = "Sobresaliente"
+                default:
+                calificacion = "Nota no valida"
+                break;
+            }         
             // Repetimos el ejercicio 3 con estructura de control switch - case
-
             alert('Una nota de '+nota+' es '+calificacion);
             console.log('Una nota de '+nota+' es '+calificacion);
                 
