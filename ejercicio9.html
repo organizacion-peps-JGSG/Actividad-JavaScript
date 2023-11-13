@@ -1,4 +1,4 @@
-<!-- Escriba su nombre AQUÍ-->
+<!--Manuel Felipe Sánchez Córdoba-->
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -8,20 +8,21 @@
         <h1>Ejercicio 9. Bucle do-while: Tabla de multiplicar</h1>
         <p>Modifique este HTML</p>
         <script>
-            let i=0;
-            /* IMPLEMENTA TU CODIGO AQUÍ
-            hacer:
-                document.writeln("Tabla de multiplicar del "+i+"<br/>");
+            let i = 0;
+
+            do {
+                document.writeln("Tabla de multiplicar del " + i + "<br/>");
                 document.writeln("-----------------------------------------<br/>");
-                let j=0;
-                hacer:
-                    document.writeln(i+" x "+j+" = "+(i*j)+"<br/>");
+
+                let j = 0;
+                do {
+                    document.writeln(i + " x " + j + " = " + (i * j) + "<br/>");
                     j++;
-                mientras que j<=10 
-                    
+                } while (j <= 10);
+
                 document.writeln("<br/>");
                 i++;
-            mientras i<=10 */
+            } while (i <= 10);
         </script>
     </body>
 </html>
