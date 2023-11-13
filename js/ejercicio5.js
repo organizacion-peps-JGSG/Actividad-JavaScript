@@ -32,15 +32,16 @@ function obtenerCalificacion(nota)
         calificacion = "Suficiente"
         break;
         case (nota >= 6 && nota <7):
-        calificacion = "Bin"
+        calificacion = "Bien"
         break;
         case (nota >= 7 && nota <9):
         calificacion = "Notable"
         break;
         case (nota >= 9 && nota <=10):
         calificacion = "Sobresaliente"
+        break;
         default:
-        calificacion = "Nota no valida"
+        calificacion = "Incorrecta"
         break;
     }
 
