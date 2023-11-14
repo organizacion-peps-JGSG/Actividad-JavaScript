@@ -1,4 +1,4 @@
-<!-- Escriba su nombre aquí-->
+<!-- Aarón Caselles Casanova-->
 <html lang="es">
     <head>
         <title>Ejercicio 1. Números en Java Script</title>
@@ -15,9 +15,11 @@
         <p id="resultado">Cada amigo tiene que pagar: </p>
         <script>
             // Declaramos las constantes kTOTAL y kPERSONAS
-            
+            const kTOTAL = 102;
+            const kPERSONAS = 6;
             // Declaramos la variable resultado y calculamos la división de reparto
-            
+
+            const resultado = kTOTAL / kPERSONAS;
             // Mostramos el resultado por consola
             console.log('Cada amigo tiene que pagar: '+resultado+' €uros.');
             document.getElementById("resultado").innerHTML+=resultado+' €uros.';   
