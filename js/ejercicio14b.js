@@ -6,8 +6,13 @@
  */
 function calcularMedia(v)
 {
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    if (v.length === 0) {
+        return 0; // Manejo de array vacío para evitar división por cero
+    }
+
+    const suma = v.reduce((acc, curr) => acc + curr, 0);
+    const media = suma / v.length;
+    return media;
 }
 /**
  * Obtiene la nota mínima
@@ -16,9 +21,12 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
-    return minima;
+    if (v.length === 0) {
+        return 0; // Manejo de array vacío
+    }
+
+    const minimo = v.reduce((min, current) => (current < min ? current : min), v[0]);
+    return minimo;
 }
 /**
  * Obtiene la nota Máxima
@@ -27,9 +35,12 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (v.length === 0) {
+        return 0; // Manejo de array vacío
+    }
 
-    return maxima;
+    const maximo = v.reduce((max, current) => (current > max ? current : max), v[0]);
+    return maximo;
 }
 /**
  * Cuenta el número de aprobados
@@ -38,10 +49,8 @@ function calcularMaximo(v)
  */
 function contarAprobados(v)
 {
-    let aprobados=0;
-
-    // COMPLETA TU CODIGO
-
+    const umbralAprobacion = 5; // Cambia este valor si el umbral es diferente
+    const aprobados = v.filter(calificacion => calificacion >= umbralAprobacion).length;
     return aprobados;
 }
 /**
@@ -51,11 +60,9 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=0;
-    
-    // COMPLETA TU CODIGO
-
-    return suspensos;
+    const umbralSuspension = 5; // Cambia este valor si el umbral es diferente
+    const cantidadSuspensos = v.filter(calificacion => calificacion < umbralSuspension).length;
+    return cantidadSuspensos;
 }
 
 

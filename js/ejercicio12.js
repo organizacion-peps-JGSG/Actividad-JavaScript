@@ -34,6 +34,11 @@ function menu2()
     let sustraendo=0;
     let resultado=-1;
 
+    minuendo = parseInt(prompt("Introduce el minuendo: "));
+    sustraendo = parseInt(prompt("Introduce el sustraendo: "));
+
+    resultado = minuendo - sustraendo;
+
     console.log("El resultado de la resta "+minuendo+" - "+sustraendo+" es "+resultado);
     return resultado;
 }
@@ -49,7 +54,17 @@ function menu3()
     
     // IMPLEMENTA TU CODIGO AQUÍ 
 
-    return 3;
+    let n1 = parseInt(prompt("Introduce el primero numero: "));
+    let n2 = parseInt(prompt("Introduce el segundo numero: "));
+
+
+    resultado = n1 * n2;
+
+    console.log("El resultado de la multiplicación "+n1+" X "+n2+" es "+resultado);
+
+
+
+    return resultado;
 }
 
 /**
@@ -64,7 +79,17 @@ function menu4()
     
     // IMPLEMENTA TU CÓDIGO AQUÍ
 
-    return 4;
+
+    let dividendo = parseInt(prompt("Introduce el dividendo :"));
+    let divisor = parseInt(prompt("Introduce el divisor :"));
+
+
+    resultado = dividendo / divisor;
+
+    console.log("El resultado de la división "+dividendo+" / "+divisor+" es "+resultado);
+
+
+    return resultado;
 
 }
 
