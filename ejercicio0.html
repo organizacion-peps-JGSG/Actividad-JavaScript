@@ -14,27 +14,17 @@
         </ul>
         
         <p id="demo">Escribiremos en este elemento HTML</p>
+        <p id="resultado">Cada amigo tiene que pagar: </p>
         <script>
-            // Alerta
+            // Declaramos las constantes kTOTAL y kPERSONAS
+            const total=102;
+            const personas=6;
+            // Declaramos la variable resultado y calculamos la división de reparto
+            var resultado=total/personas;
             
-            /* 
-                Escribir en un elemento HTML, usando innerHTML.
-                Escribimos en este elemento HTML: ¡Hola mundo!
-            */
-           
-           
-            // Consolas log
-           
-            // Mensaje de información
-            
-            // Mensaje de error
-            
-            // Mensaje de advertencia
-            
-            // Debugger
-            // Descomenta --> 
-            /* Descomenta --> /* debugger
-            console.log('Despues de la depuración'); */ // <--- Descomenta para comprobar el efecto.
+            // Mostramos el resultado por consola
+            console.log('Cada amigo tiene que pagar: '+resultado+' €uros.');
+            document.getElementById("resultado").innerHTML+=resultado+' €uros.';   
         </script>
     </body>
 </html>
