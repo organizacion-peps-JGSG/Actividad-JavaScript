@@ -7,12 +7,27 @@
         <h1>Ejercicio 6. Adivina número secreto</h1>
         <p>Realice una aplicación que permita averiguar un número secreto entre 0 y 10, permitiendo que el usuario pueda escoger el número de intentos.</p>
         <b>Intentos: </b><p id="intentos"></p>
-        <script src="js/ejercicio6.js">
-            var intentos=window.prompt('Introduce el número de intentos: ');
+        <script src="js/ejercicio6.js"></script>
+        <script>
+            var intentos=Number.parseInt(prompt('Introduzca el número de intentos: '));
+            var secreto=tirarDado();
+            var num_intento=1;
+            console.log('Numero de intentos :' +intentos);
+            console.log('Numeri secreto'+secreto);
+
+         
             do{
                 intentos--;
                 document.getElementById("intentos").innerHTML=intentos;
-            }while(intentos>0)
+                var numero_elegido=Number.parseInt(prompt('Introduzca el número : '));
+                if(numero_elegido==secreto){
+                    alert('¡Has acertado!');
+                    break;
+                }num_intento++;
+
+
+            }while(intentos>num_intento)
+           
         </script>
     </body>
 </html>
