@@ -4,20 +4,24 @@
  * @returns media
  * @author: JAVIER VINAL
  */
-function calcularMedia(v)
-{
-    if (v.length == 0){return 0;}
-    let total= 0,resultado = 0;
-    // IMPLEMENTA TU CODIGO AQUÍ
-    for(let i=0; i<v.length ;i++)
-    {   
-        
-        total+=v[i];
-        
+function calcularMedia(v) {
+    if (v.length === 0) { // Verificar si el array está vacío
+        return 0; // Devolver 0 si el array es vacío
     }
-    resultado=total/v.length
+
+    let total = 0, resultado = 0;
+    for (let i = 0; i < v.length; i++) {
+        total += v[i];
+    }
+    resultado = total / v.length;
+    
+    if (isNaN(resultado)) { // Verificar si el resultado es NaN
+        return 0; // Devolver 0 si el resultado es NaN
+    }
+
     return resultado;
 }
+
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
