@@ -2,16 +2,20 @@
  * Calcula la media de los valores
  * @param {Array} v 
  * @returns media
- * @author: Autor/a
+ * @author: JAVIER VINAL
  */
 function calcularMedia(v)
 {
-    var suma=0;
-   
-   for (var i = 0; i<v.length; i++){
-        suma=suma+v[i];
-   }
-   var resultado=suma/v.length;
+    if (v == 0){return 0;}
+    let total= 0,resultado = 0;
+    // IMPLEMENTA TU CODIGO AQUÍ
+    for(let i=0; i<v.length ;i++)
+    {   
+        
+        total+=v[i];
+        
+    }
+    resultado=total/v.length
     return resultado;
 }
 /**
@@ -21,8 +25,8 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima= v.reduce((a, b) => Math.min(a, b));
-    console.log(minima);// <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (v == 0){return 0;}
+    let minima=Math.min.apply(Math, v); // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
     return minima;
 }
@@ -33,8 +37,8 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima= v.reduce((a, b) => Math.max(a, b));
-    console.log(maxima);
+    if (v == 0){return 0;}
+    let maxima=Math.max.apply(Math, v); // <-- CORRIGE E IMPLEMENTA EL CODIGO
 
     return maxima;
 }
@@ -46,12 +50,13 @@ function calcularMaximo(v)
 function contarAprobados(v)
 {
     let aprobados=0;
-    for (var i = 0; i<v.length; i++){
-        if(v[i]>=5)
-            aprobados++;
-    }
 
-    // COMPLETA TU CODIGO
+    for(let i=0; i<v.length ;i++)
+    {   
+        if (v[i] >= 5){
+        aprobados++;}
+        
+    }
 
     return aprobados;
 }
@@ -63,10 +68,12 @@ function contarAprobados(v)
 function contarSuspensos(v)
 {
     let suspensos=0;
-    for (var i = 0; i<v.length; i++){   
-        if(v[i]<5)
-            suspensos++;
-    }   
+    for(let i=0; i<v.length ;i++)
+    {   
+        if (v[i] < 5){
+            suspensos++;}
+        
+    }
     // COMPLETA TU CODIGO
 
     return suspensos;
@@ -76,7 +83,7 @@ function contarSuspensos(v)
 
 /**
  * Aplicacion principal Ejercicio14
- * @author: José Gaspar Sánchez García
+ * @author: JAVIER VINAL
  */
 
 function appMain(){
