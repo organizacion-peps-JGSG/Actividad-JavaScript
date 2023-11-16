@@ -10,7 +10,12 @@
 
 function esMayorEdad(edad)
 {
-    return 0; // Debe escribir el código correcto AQUÍ.
+    var boolEdad;
+    
+    if (edad >= 18 ){boolEdad=true}
+                else{boolEdad=false};
+        
+    return boolEdad;
 }
 /**
  * Obtiene la calificación equivalente a la nota numérica
@@ -21,9 +26,43 @@ function obtenerCalificacion(nota)
 {
     var calificacion="Incorrecta";
 
-            // Estructura de control *** switch(nota) ***
-            
-            // Complete el codigo AQUÍ
+        switch(nota){
+            case 0:
+                calificacion = 'Muy deficiente';
+                break;
+            case 1:
+                calificacion = "Muy deficiente";
+                break;
+            case 2:
+                calificacion = "Muy deficiente";
+                break;
+            case 3:
+                calificacion = "Insuficiente";
+                break;
+            case 4:
+                calificacion = "Insuficiente";
+                break;
+            case 5:
+                calificacion = "Suficiente";
+                break;
+            case 6:
+                calificacion = "Bien";
+                break;
+            case 7:
+                calificacion = "Notable";
+                break;
+            case 8:
+                calificacion = "Notable";
+                break;
+            case 9:
+                calificacion = "Sobresaliente";
+                break;
+            case 10:
+                calificacion = "Sobresaliente";
+                break;
+            default: 'error'
+                break;
+        }
 
             return calificacion;
 }

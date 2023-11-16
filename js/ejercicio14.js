@@ -2,13 +2,26 @@
  * Calcula la media de los valores
  * @param {Array} v 
  * @returns media
- * @author: Autor/a
+ * @author: JAVIER VINAL
  */
-function calcularMedia(v)
-{
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+function calcularMedia(v) {
+    if (v.length === 0) { // Verificar si el array está vacío
+        return 0; // Devolver 0 si el array es vacío
+    }
+
+    let total = 0, resultado = 0;
+    for (let i = 0; i < v.length; i++) {
+        total += v[i];
+    }
+    resultado = total / v.length;
+    
+    if (isNaN(resultado)) { // Verificar si el resultado es NaN
+        return 0; // Devolver 0 si el resultado es NaN
+    }
+
+    return resultado;
 }
+
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
@@ -16,7 +29,8 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (v.length == 0){return 0;}
+    let minima=Math.min.apply(Math, v); // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
     return minima;
 }
@@ -27,7 +41,8 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if (v == 0){return 0;}
+    let maxima=Math.max.apply(Math, v); // <-- CORRIGE E IMPLEMENTA EL CODIGO
 
     return maxima;
 }
@@ -40,7 +55,12 @@ function contarAprobados(v)
 {
     let aprobados=0;
 
-    // COMPLETA TU CODIGO
+    for(let i=0; i<v.length ;i++)
+    {   
+        if (v[i] >= 5){
+        aprobados++;}
+        
+    }
 
     return aprobados;
 }
@@ -52,7 +72,12 @@ function contarAprobados(v)
 function contarSuspensos(v)
 {
     let suspensos=0;
-    
+    for(let i=0; i<v.length ;i++)
+    {   
+        if (v[i] < 5){
+            suspensos++;}
+        
+    }
     // COMPLETA TU CODIGO
 
     return suspensos;
@@ -62,7 +87,7 @@ function contarSuspensos(v)
 
 /**
  * Aplicacion principal Ejercicio14
- * @author: José Gaspar Sánchez García
+ * @author: JAVIER VINAL
  */
 
 function appMain(){

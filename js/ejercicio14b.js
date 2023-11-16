@@ -2,35 +2,45 @@
  * Calcula la media de los valores
  * @param {Array} v 
  * @returns media
- * @author: Autor/a
+ * @author: Javier Vinal Costa
  */
 function calcularMedia(v)
 {
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+    if (v.length === 0) {
+        return 0; // Manejo de array vacío para evitar división por cero
+    }
+
+    const suma = v.reduce((acc, curr) => acc + curr, 0);
+    const media = suma / v.length;
+    return media;
 }
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
  * @returns minima
  */
-function calcularMinimo(v)
-{
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-    
-    return minima;
-}
+ function calcularMinimo(v) {
+   if (v.length === 0) {
+     return 0; // Manejo de array vacío
+   }
+ 
+   const minimo = v.reduce((min, current) => (current < min ? current : min), v[0]);
+   return minimo;
+ }
 /**
  * Obtiene la nota Máxima
  * @param {Array} v 
  * @returns maxima
  */
-function calcularMaximo(v)
-{
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
-    return maxima;
-}
+ function calcularMaximo(v) {
+   if (v.length === 0) {
+     return 0; // Manejo de array vacío
+   }
+ 
+   const maximo = v.reduce((max, current) => (current > max ? current : max), v[0]);
+   return maximo;
+ }
+ 
 /**
  * Cuenta el número de aprobados
  * @param {Array} v 
@@ -38,10 +48,8 @@ function calcularMaximo(v)
  */
 function contarAprobados(v)
 {
-    let aprobados=0;
-
-    // COMPLETA TU CODIGO
-
+    const aprobado = 5; // Cambia este valor si el umbral es diferente
+    const aprobados = v.filter(calificacion => calificacion >= aprobado).length;
     return aprobados;
 }
 /**
@@ -51,24 +59,21 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
-    let suspensos=0;
-    
-    // COMPLETA TU CODIGO
-
-    return suspensos;
+    const aprobado = 5; // Cambia este valor si el umbral es diferente
+    const cantidadSuspensos = v.filter(calificacion => calificacion < aprobado).length;
+    return cantidadSuspensos;
 }
-
-
 
 /**
  * Aplicacion principal Ejercicio14
- * @author: José Gaspar Sánchez García
+ * @author: Javier Vinal Costa
  */
 
 function appMain(){
 
     // Indique cuantas notas desea introducir
     let numeroNotas=parseInt(prompt("¿Cuantas notas desea introdurcir?"));
+
     let notas=new Array();
     var n=-1;
     // Leemos notas desde teclado
@@ -81,6 +86,7 @@ function appMain(){
         notas[i]=n;
         console.log(`notas[${i}]: ${notas[i]}`);
     }
+   
 
 
     console.log("La nota media es "+calcularMedia(notas));

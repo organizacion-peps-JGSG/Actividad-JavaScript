@@ -12,7 +12,7 @@ function menu1()
 {
     // Implemente la opción de la calculadora que permite sumar.
     console.info("Suma:");
-    let sumando1=parseInt(prompt("Introduzca el prmier sumando: ",0));
+    let sumando1=parseInt(prompt("Introduzca el primer sumando: ",0));
     let sumando2=parseInt(prompt("Introduzca el segundo sumando: ",0));
     let resultado=sumando1+sumando2;
     console.log("El resultado de la suma "+sumando1+" + "+sumando2+" es "+resultado);
@@ -32,9 +32,10 @@ function menu2()
     // IMPLEMENTA TU CÓDIGO AQUÍ
     let minuendo=0;
     let sustraendo=0;
-    let resultado=-1;
+    let resultado=minuendo-sustraendo;
 
     console.log("El resultado de la resta "+minuendo+" - "+sustraendo+" es "+resultado);
+
     return resultado;
 }
 /**
@@ -47,9 +48,14 @@ function menu3()
     // Implemente la opción de la calculadora que permite multiplicar.
     console.info("Multiplica:");
     
-    // IMPLEMENTA TU CODIGO AQUÍ 
-
-    return 3;
+     // IMPLEMENTA TU CÓDIGO AQUÍ
+     let multiplo1=0;
+     let multiplo2=0;
+     let resultado=multiplo1*multiplo2;
+ 
+     console.log("El resultado de la multiplicacion  "+multiplo1+" X "+multiplo2+" es "+resultado);
+    
+     return resultado;
 }
 
 /**
@@ -61,16 +67,18 @@ function menu4()
 {
     // Implemente la opción de la calculadora que permite dividir.
     console.info("Divide:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
+    let dividendo=0;
+    let divisor=0;
+    let resultado=dividendo/divisor;
+    console.log("El resultado de la division  "+dividendo+" / "+divisor+" es "+resultado);
+    return resultado;
+};
 
-    return 4;
 
-}
 
 /**
  * Menú Aplicación Calculadora
- * @author: José Gaspar Sánchez García.
+ * @author: JAVIER VINAL COSTA
  */
 function appMenu()
 {
