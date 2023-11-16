@@ -6,7 +6,7 @@
  */
 function calcularMedia(v)
 {
-    if (v == 0){return 0;}
+    if (v.length == 0){return 0;}
     let total= 0,resultado = 0;
     // IMPLEMENTA TU CODIGO AQUÍ
     for(let i=0; i<v.length ;i++)
@@ -25,7 +25,7 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    if (v == 0){return 0;}
+    if (v.length == 0){return 0;}
     let minima=Math.min.apply(Math, v); // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
     return minima;
