@@ -1,5 +1,5 @@
 /**
- * @author: Escriba su nombre y apellidos aquí.
+ * @author: Aarón Caselles Casanova
  */
 
 /**
@@ -7,10 +7,24 @@
  * @param {int} edad 
  * @returns true | false;
  */
-
 function esMayorEdad(edad)
 {
-    return 0; // Debe escribir el código correcto AQUÍ.
+    if (!isNaN(edad)) {
+        console.log("Es un número");
+        // Complete el codigo Javascript
+        if (edad < 18){
+            //window.alert("Usted no tiene edad para conducir") 
+            return false;
+        }else {
+            //window.alert("Usted ya es mayor de edad; por tanto, ya podría conducir")
+            return true;
+        }
+             
+    } else {
+        console.error("Error:No es un número");
+        return false;
+    } 
+
 }
 /**
  * Obtiene la calificación equivalente a la nota numérica
@@ -22,7 +36,44 @@ function obtenerCalificacion(nota)
     var calificacion="Incorrecta";
 
             // Estructura de control *** switch(nota) ***
-            
+            switch (nota){
+                case 0:
+                case 1:
+                case 2:        
+                {
+                    calificacion = "Muy deficiente";
+                    break;
+                }
+                case 3:
+                case 4:       
+                {
+                    calificacion = "Insuficiente";
+                    break;
+                }
+                case 5:        
+                {
+                    calificacion = "Suficiente";
+                    break;
+                }
+                case 6:       
+                {
+                    calificacion = "Bien";
+                    break;
+                }
+                case 7:
+                case 8:        
+                {
+                    calificacion = "Notable";
+                    break;
+                }
+                case 9:
+                case 10:        
+                {
+                    calificacion = "Sobresaliente";
+                    break;
+                }
+                }
+
             // Complete el codigo AQUÍ
 
             return calificacion;

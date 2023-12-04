@@ -1,11 +1,11 @@
 /**
  * Ejercicio 13. Cadenas en Javascript
- * @author: Sustituye tu nombre y apellidos
+ * @author: Aarón Caselles Casanova
  */
 
 /**
  * Completa la función Procesar Cadedenas
- * @author: José Gaspar Sánchez García.
+ * @author: Aarón Caselles Casanova
  */
 function procesarCadenas()
 {

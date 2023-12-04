@@ -2,13 +2,22 @@
  * Calcula la media de los valores
  * @param {Array} v 
  * @returns media
- * @author: Autor/a
+ * @author: Aarón Caselles Casanova
  */
-function calcularMedia(v)
-{
-    // IMPLEMENTA TU CODIGO AQUÍ
-    return -1;
+function calcularMedia(v) {
+    let sum = 0;
+    /**comprobamos si el vector esta vacio */
+    if (v.length == 0)
+    {
+        return 0
+    }
+    for (let i = 0; i < v.length; i++) {
+        sum += v[i];
+    }
+    let media = sum / v.length;
+    return media;
 }
+
 /**
  * Obtiene la nota mínima
  * @param {Array} v 
@@ -16,7 +25,17 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    let minima=Number.MAX_SAFE_INTEGER; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    /**comprobamos si el vector esta vacio */
+    if (v.length == 0)
+    {
+        return 0
+    }
+    for (let i = 0; i < v.length; i++) {
+        if (v[i] < minima) {
+            minima = v[i];
+        }
+    }
     
     return minima;
 }
@@ -27,8 +46,17 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
-
+    let maxima=Number.MIN_SAFE_INTEGER; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    /**comprobamos si el vector esta vacio */
+    if (v.length == 0)
+    {
+        return 0
+    }
+    for (let i = 0; i < v.length; i++) {
+        if (v[i] > maxima) {
+            maxima = v[i];
+        }
+    }
     return maxima;
 }
 /**
@@ -39,9 +67,10 @@ function calcularMaximo(v)
 function contarAprobados(v)
 {
     let aprobados=0;
-
-    // COMPLETA TU CODIGO
-
+    for (let i=0; i<v.length;i++)
+        if(v[i] >= 5){
+            aprobados++
+        }
     return aprobados;
 }
 /**
@@ -52,17 +81,17 @@ function contarAprobados(v)
 function contarSuspensos(v)
 {
     let suspensos=0;
-    
-    // COMPLETA TU CODIGO
-
+    for (let i=0; i <v.length;i++){
+        if(v[i] < 5){
+            suspensos++
+        }
+    }
     return suspensos;
 }
 
-
-
 /**
  * Aplicacion principal Ejercicio14
- * @author: José Gaspar Sánchez García
+ * @author: Aarón Caselles Casanova
  */
 
 function appMain(){
