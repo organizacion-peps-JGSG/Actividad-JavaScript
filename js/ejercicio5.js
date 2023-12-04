@@ -36,7 +36,44 @@ function obtenerCalificacion(nota)
     var calificacion="Incorrecta";
 
             // Estructura de control *** switch(nota) ***
-            
+            switch (nota){
+                case 0:
+                case 1:
+                case 2:        
+                {
+                    calificacion = "Muy deficiente";
+                    break;
+                }
+                case 3:
+                case 4:       
+                {
+                    calificacion = "Insuficiente";
+                    break;
+                }
+                case 5:        
+                {
+                    calificacion = "Suficiente";
+                    break;
+                }
+                case 6:       
+                {
+                    calificacion = "Bien";
+                    break;
+                }
+                case 7:
+                case 8:        
+                {
+                    calificacion = "Notable";
+                    break;
+                }
+                case 9:
+                case 10:        
+                {
+                    calificacion = "Sobresaliente";
+                    break;
+                }
+                }
+
             // Complete el codigo AQUÍ
 
             return calificacion;
