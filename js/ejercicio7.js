@@ -27,16 +27,15 @@ function fibonacci(n)
  * Aplicación principal Ejercicio 7
  * @author: Manuel Felipe Sánchez Córdoba
  */
-function appMain()
-{
-    const salidaHTML=document.getElementById("salida");
-    let x=parseInt(prompt("Indique el número de elementos de la serie de Fibonacci: "));
-    let v=fibonacci(x);
+ function appMain() {
+    const salidaHTML = document.getElementById("salida");
+    let x = parseInt(prompt("Indique el número de elementos de la serie de Fibonacci: "));
+    let v = fibonacci(x);
 
-    console.log(`Fibonacci(${x}) = [ ${v} ]`);
-    // alert("Fibonacci: "+v);
-    salidaHTML.innerHTML="Fibonacci("+x+") = ["+v+"].";
+    console.log(`Fibonacci(${x}) = [${v.join(", ")}]`);
+    salidaHTML.innerHTML = "Fibonacci(" + x + ") = [" + v.join(", ") + "].";
 }
+
 
 // Exportamos la funcion fibonacci para poder realizar el Testing
 module.exports={

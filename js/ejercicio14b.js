@@ -6,6 +6,10 @@
  */
  function calcularMedia(v) {
     let sum = 0;
+    if(v.length == 0){
+        return 0;
+    }
+
     for (let i = 0; i < v.length; i++) {
         sum += v[i];
     }
@@ -20,7 +24,10 @@
  */
 function calcularMinimo(v)
 {
-    let minima=Number.MIN_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    let minima=Number.MAX_SAFE_INTEGER; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if(v.length == 0){
+        return 0;
+    }
     for (let i = 0; i < v.length; i++) {
         if (v[i] < minima) {
             minima = v[i];
@@ -36,7 +43,10 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
-    let maxima=Number.MAX_VALUE; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    let maxima=Number.MIN_SAFE_INTEGER; // <-- CORRIGE E IMPLEMENTA EL CODIGO
+    if(v.length == 0){
+        return 0;
+    }
     for (let i = 0; i < v.length; i++) {
         if (v[i] > maxima) {
             maxima = v[i];
