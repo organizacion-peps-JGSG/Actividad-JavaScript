@@ -1,5 +1,5 @@
 {
-  "type": "module",
+  "type": "commonjs",
   "name": "testing-ci",
   "version": "1.0.0",
   "description": "Proyecto de prueba integracion continua con CI",

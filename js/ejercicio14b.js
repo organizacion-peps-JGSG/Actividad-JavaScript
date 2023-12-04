@@ -9,7 +9,7 @@
     if(v.length == 0){
         return 0;
     }
-
+    
     for (let i = 0; i < v.length; i++) {
         sum += v[i];
     }
