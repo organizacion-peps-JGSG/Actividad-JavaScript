@@ -11,11 +11,11 @@ function fibonacci(n)
     if (n <= 0){
         return vector;
     } else if (n == 1){
-        vector.push(0);
+        vector.push(1);
     }else if (n == 2){
-        vector.push(0,1);
+        vector.push(1,1);
     }else{
-        vector = [0,1];
+        vector = [1,1];
         for (let i=2; i <n; i++){
             vector.push(vector[i -1] + vector[i-2]);
         }
