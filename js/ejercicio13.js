@@ -1,11 +1,11 @@
 /**
  * Ejercicio 13. Cadenas en Javascript
- * @author: Sustituye tu nombre y apellidos
+ * @author: Manuel Felipe Sánchez Córdoba
  */
 
 /**
  * Completa la función Procesar Cadedenas
- * @author: José Gaspar Sánchez García.
+ * @author: Manuel Felipe Sánchez Córdboa.
  */
 function procesarCadenas()
 {

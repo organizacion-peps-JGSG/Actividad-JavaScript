@@ -1,5 +1,5 @@
 /**
- * @author: Escriba su nombre y apellidos aquí.
+ * @author: Manuel Felipe Sánchez Córdoba.
  */
 
 /**
@@ -10,7 +10,7 @@
 
 function esMayorEdad(edad)
 {
-    return 0; // Debe escribir el código correcto AQUÍ.
+    return edad >= 18; // Debe escribir el código correcto AQUÍ.
 }
 /**
  * Obtiene la calificación equivalente a la nota numérica
@@ -21,11 +21,31 @@ function obtenerCalificacion(nota)
 {
     var calificacion="Incorrecta";
 
-            // Estructura de control *** switch(nota) ***
-            
-            // Complete el codigo AQUÍ
+    switch (true){
+        case (nota >= 0 && nota < 3):
+        calificacion = "Muy deficiente";
+        break;
+        case (nota >= 3 && nota < 5):
+        calificacion = "Insuficiente";
+        break;
+        case (nota >= 5 && nota <6 ):
+        calificacion = "Suficiente"
+        break;
+        case (nota >= 6 && nota <7):
+        calificacion = "Bien"
+        break;
+        case (nota >= 7 && nota <9):
+        calificacion = "Notable"
+        break;
+        case (nota >= 9 && nota <=10):
+        calificacion = "Sobresaliente"
+        break;
+        default:
+        calificacion = "Incorrecta"
+        break;
+    }
 
-            return calificacion;
+    return calificacion;
 }
 /**
  * Comprueba la mayoria de edad en la página HTML.

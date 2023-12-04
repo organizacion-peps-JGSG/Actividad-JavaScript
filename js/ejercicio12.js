@@ -1,11 +1,11 @@
 /**
  * Ejercicio 12. Calculadora JavaScript
- * Autor: 
+ * Autor: Manuel Felipe Sánchez Córdoba
  */
 
 /**
  * Implementa el Menú 1: Sumar
- * @author: Coloca tu nombre aquí.
+ * @author: Manuel Felipe Sánchez Córdoba.
  * @return suma
  */
 function menu1()
@@ -21,60 +21,72 @@ function menu1()
 
 /**
  * Implementa el Menú 2: Restar
- * @author: Coloca tu nombre aquí.
+ * @author: Manuel Felipe Sánchez Córdoba.
  * @return resta
  */
 function menu2()
 {
     // Implemente la opción de la calculadora que permite restar.
     console.info("Resta:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
-    let minuendo=0;
-    let sustraendo=0;
-    let resultado=-1;
+    let minuendo = parseInt(prompt("Introduce el minuendo: ", 0));
+    let sustraendo = parseInt(prompt("Introduce el sustraendo: ", 0));
 
+    let resultado = minuendo - sustraendo
+   
     console.log("El resultado de la resta "+minuendo+" - "+sustraendo+" es "+resultado);
     return resultado;
 }
 /**
  * Implementa el Menú 3: Multiplicar
- * @author: Coloca tu nombre aquí.
+ * @author: Manuel Felipe Sánchez Córdoba.
  * @return multiplicación
  */
 function menu3()
 {
     // Implemente la opción de la calculadora que permite multiplicar.
     console.info("Multiplica:");
-    
-    // IMPLEMENTA TU CODIGO AQUÍ 
+    let numero1= parseInt(prompt("Introduce el primer valor: ",0));
+    let numero2= parseInt(prompt("Introduce el segundo valor: ",0));
 
-    return 3;
+    let resultado = numero1 * numero2
+
+    console.log("El resultado de la multiplicacion "+numero1+ " * "+numero2+" es "+resultado);
+    return resultado;
 }
 
 /**
  * Implementa el Menú 4: Dividir
- * @author: Coloca tu nombre aquí.
+ * @author: Manuel Felipe Sánchez Córdoba.
  * @return división
  */
 function menu4()
 {
     // Implemente la opción de la calculadora que permite dividir.
     console.info("Divide:");
-    
-    // IMPLEMENTA TU CÓDIGO AQUÍ
+    let numero1= parseFloat(prompt("Introduce el primer valor: ", 0));
+    let numero2= parseFloat(prompt("Introduce el segundo valor: ", 0));
 
-    return 4;
+    if (numero2==0){
+        console.error("No se puede dividir por cero.");
+        return NaN;
+    }
+   
+   
+    let resultado = numero1 / numero2
+    console.log("El resultado de la division "+numero1+" / "+numero2+" es "+resultado);
+    return resultado;
 
 }
 
 /**
  * Menú Aplicación Calculadora
- * @author: José Gaspar Sánchez García.
+ * @author: Manuel Felipe Sánchez Córdoba.
  */
 function appMenu()
 {
     let opcion=-1;
+    let resultado=0;
+
     do{
         console.log("\n*** CALCULADORA ***\n");
         console.log("Menú:");
@@ -85,15 +97,31 @@ function appMenu()
         console.log("0. Salir");
         opcion=parseInt(prompt("Introduzca opción: "));
 
-        switch(opcion)
-        {
-            case 1: {menu1();break;}
-            case 2: {menu2();break;}
-            case 3: {menu3();break;}
-            case 4: {menu4();break;}
-            case 0: {console.info("Saliendo aplicación calculadora.");break;}
-            default: {console.error("Error: Opción "+opcion+" incorrecta."); break;}
+        switch (opcion) {
+            case 1: 
+            resultado = menu1();
+            console.log("El resultado de la Suma es: " +resultado);
+            break;
+            case 2: 
+            resultado = menu2(); 
+            console.log("El resultado de la Resta es: " +resultado);
+            break;
+            case 3: 
+            resultado = menu3(); 
+            console.log("El resultado de la Multiplicacion es: " +resultado);
+            break;
+            case 4: 
+            resultado = menu4(); 
+            console.log("El resultado de la Division es: " +resultado);
+            break;
+            case 0: console.info("Saliendo aplicación calculadora."); break;
+            default: 
+                console.error("Error: Opción " + opcion + " incorrecta."); 
+                break;
         }
 
     }while(opcion!=0)
+
+    console.log("El resultado de la operacion es: " +resultado)
 }
+appMenu();
